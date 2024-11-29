@@ -1,11 +1,10 @@
 import CityOverview from "../components/cityOverview/cityOverview";
-import FooterSection from "../components/footerSection/footerSection";
-import HeroSection from "../components/heroSection/heroSection";
-
+// import HeroSection from "../components/heroSection/heroSection";
+import FeaturesShowcase from "../components/featuresShowcase/featuresShowcase"
 export default function Screens() {
   return (
     <>
-      <HeroSection />
+      {/* <HeroSection /> */}
       <CityOverview />
       <FooterSection />
     </>

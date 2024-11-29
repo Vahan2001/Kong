@@ -11,11 +11,11 @@ export default function FeaturesShowcase() {
                             <div className={style.kong_banner}>
                                 <p className={style.kong_text}>
                                     <span className={style.text_layer}>
-                                        <b>BANANA ZONE</b>
+                                        BANANA ZONE
                                     </span>
-                                        is is also a place where the unexpected happens. <br />
+                                        <p className={style.text}>is is also a place <br /> where the unexpected happens.</p>
                                     <span className={style.text_layer}>
-                                        <b>KONG FEELS IT</b>
+                                       KONG FEELS IT
                                     </span>
                                 </p>
                             </div>
