@@ -10,24 +10,29 @@
 }
 
 .kong_banner {
-    width: 100%; 
-    max-width: 525px;
-    text-align: center; 
-    padding: 20px; 
-    border-radius: 8px; 
     background-image: url("../../assets/images/Frame1.png"); 
-    background-size: cover; 
-    background-position: center; 
-    background-color: #FFE4B5; 
-    font-family: "Jingleberry"; 
-    justify-content: flex-end;
-    align-items: flex-end;
+    /* width: 100%;  */
+    width: 525px;;
+    height: 210px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 60px;
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 70px;
+    border: 3px solid white;
 }
 
 .kong_text {
     font-size: 1.5rem; 
     color: #000; 
-    line-height: 1.5; 
+    line-height: 1.5;
+    font-family: "Jingleberry";
 }
 
 .kong_section {
@@ -40,6 +45,8 @@
     background-size: cover; 
     background-position: center; 
     width: 33.3%;
+    object-fit: cover;
+    transition: background-color 0.5s ease-in-out;
 }
 
 .kong-section-left {
@@ -55,14 +62,14 @@
 }
 
 @media (max-width: 1024px) {
-    .kong_section {
+    /* .kong_section {
         flex-wrap: wrap;
         flex-direction: column; 
-    }
+    } */
 
-    .kong-section-item {
+    /* .kong-section-item {
         height: 70vh; 
-    }
+    } */
 
     .kong_banner {
         max-width: 450px;
@@ -77,14 +84,28 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 780px) {
     .kong_section {
        flex-wrap: wrap;
     }
     .kong-section-item {
-
         width: 100%;
+        object-fit: cover;
+        transition: background-color 0.5s ease-in-out;  
     }
+    .kong_banner{
+        margin: auto;
+    }
+    .kong_dys{
+        top: 70%; 
+        height: 148px;
+    }
+    .kong_text {
+        font-size: 30px;
+        font-family: "Jingleberry";
+        position: relative;
+        padding: 5px; 
+      }
 }
 
 @media (max-width: 480px) {
@@ -109,13 +130,23 @@
         top: 120%; 
     }
 }
-
+.text{
+    font-size: 39px;
+    font-family: "Jingleberry";
+    position: relative;
+    padding: 5px
+}
 .text_layer {
     position: relative;
     display: inline-block;
-    color: #FFA500; 
-    text-shadow: -3px 3px #000; 
     font-size: 2rem; 
     font-weight: bold; 
+    font-family: "Jingleberry";
+    color: #FFB032;
+  text-shadow: 
+    2px 2px 0px black, 
+    -2px 2px 0px black, 
+    2px -2px 0px black,  
+    -2px -2px 0px black;
 }
 
