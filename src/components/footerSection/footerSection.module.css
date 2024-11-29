@@ -2,7 +2,7 @@
   background-image: url("../../assets/images/footersectionImg.png");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 900px;
+  height: 1200px;
   padding: 70px 0 0 100px;
 }
 .content {
@@ -24,6 +24,89 @@
       color: #ffb032;
       text-shadow: 2px 2px 0px black, -2px 2px 0px black, 2px -2px 0px black,
         -2px -2px 0px black;
+    }
+  }
+}
+footer {
+  background-color: #fcd973;
+  & .footer__flex {
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & .head__and__text {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      & p {
+        display: flex;
+        justify-content: space-evenly;
+        font-size: 100px;
+        margin: 0;
+        font-family: "Jingleberry";
+        text-transform: uppercase;
+
+        & .kLayer,
+        & .oLayer,
+        & .nLayer,
+        & .gLayer {
+          position: relative;
+        }
+
+        & .kLetter,
+        & .oLetter,
+        & .nLetter,
+        & .gLetter {
+          position: relative;
+          z-index: 2;
+        }
+
+        & .kBottomLayer,
+        & .oBottomLayer,
+        & .nBottomLayer,
+        & .gBottomLayer {
+          position: absolute;
+          z-index: 1;
+          top: -3px;
+          left: 2px;
+          color: inherit;
+          text-shadow: none;
+        }
+
+        & .kLetter {
+          color: #ffb032;
+          text-shadow: -5px 3px 0px black;
+        }
+
+        & .oLetter {
+          color: #535353;
+          text-shadow: -5px 3px 0px black;
+        }
+
+        & .nLetter {
+          color: #ffb032;
+          text-shadow: -5px 3px 0px black;
+        }
+
+        & .gLetter {
+          color: #535353;
+          text-shadow: -5px 3px 0px black;
+        }
+      }
+    }
+
+    & .icon {
+      & .tele__and__tw {
+        display: flex;
+        gap: 20px;
+        justify-content: end;
+      }
+
+      & p {
+        color: rgba(0, 0, 0, 0.267);
+      }
     }
   }
 }
