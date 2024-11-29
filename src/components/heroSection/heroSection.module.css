@@ -1,0 +1,42 @@
+.heroSection {
+  background-image: url("../../assets/images/Asset.png");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  & .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.text {
+  width: 468px;
+  background-color: #ffb032;
+  text-align: center;
+
+  .kLetter {
+    color: #ff0000;
+  }
+
+  .oLetter {
+    color: #00ff00;
+  }
+
+  .nLetter {
+    color: #ff0000;
+  }
+
+  .gLetter {
+    color: #0000ff;
+  }
+
+  & h1 {
+    text-transform: uppercase;
+    font-size: 42px;
+  }
+
+  & p {
+    text-transform: uppercase;
+  }
+}
