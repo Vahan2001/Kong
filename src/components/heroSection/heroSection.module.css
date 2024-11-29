@@ -1,42 +1,50 @@
+@import "../../assets/fonts/fonts.css";
+
 .heroSection {
   background-image: url("../../assets/images/Asset.png");
   background-size: cover;
   background-position: center;
   height: 100vh;
   & .content {
+    padding-top: 30px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
   }
 }
 
 .text {
   width: 468px;
-  background-color: #ffb032;
+  background-color: #fcd973;
   text-align: center;
-
-  .kLetter {
-    color: #ff0000;
-  }
-
-  .oLetter {
-    color: #00ff00;
-  }
-
-  .nLetter {
-    color: #ff0000;
-  }
-
-  .gLetter {
-    color: #0000ff;
-  }
+  font-family: "Jingleberry";
+  text-transform: uppercase;
 
   & h1 {
-    text-transform: uppercase;
-    font-size: 42px;
+    font-size: 100px;
+
+    & .kLetter {
+      color: #ffb032;
+      text-shadow: -5px 6px 0px black;
+    }
+
+    & .oLetter {
+      color: #535353;
+      text-shadow: -5px 6px 0px black;
+    }
+
+    & .nLetter {
+      color: #ffb032;
+      text-shadow: -5px 6px 0px black;
+    }
+
+    & .gLetter {
+      color: #535353;
+      text-shadow: -5px 6px 0px black;
+    }
   }
 
   & p {
-    text-transform: uppercase;
+    font-size: 30px;
   }
 }
