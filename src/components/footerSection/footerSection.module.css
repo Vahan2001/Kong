@@ -104,8 +104,10 @@ footer {
         justify-content: end;
       }
 
-      & p {
-        color: rgba(0, 0, 0, 0.267);
+      & span {
+        display: block;
+        padding-top: 15px;
+        color: rgba(0, 0, 0, 0.678);
       }
     }
   }

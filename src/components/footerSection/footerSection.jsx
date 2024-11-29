@@ -45,7 +45,7 @@ export default function FooterSection() {
               <img src={telegramImg} alt="telegram" />
               <img src={twitterImg} alt="twitter" />
             </div>
-            <p>© KONG 2024 - All rights reserved</p>
+            <span>© KONG 2024 - All rights reserved</span>
           </div>
         </div>
       </footer>
