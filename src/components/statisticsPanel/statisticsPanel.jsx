@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import style from "./statisticsPanel.module.css";
 import secondImg from "../../assets/images/second.png";
 import firstImg from "../../assets/images/first.png";
@@ -8,8 +8,26 @@ import circle from "../../assets/images/static.png";
 import copy from "../../assets/images/kopi.png";
 
 export default function StatisticsPanel() {
-
   const contractAddress = "Cm6acA7PHfktYMBa7DK9vKJb4pzHeSr5gYvz1idMRnaf";
+
+  const [shortenedAddress, setShortenedAddress] = useState(contractAddress);
+
+  const updateAddressBasedOnScreenSize = () => {
+    if (window.innerWidth <= 1024) {
+      setShortenedAddress(`${contractAddress.slice(0, 6)}...${contractAddress.slice(-3)}`);
+    } else {
+      setShortenedAddress(contractAddress);
+    }
+  };
+
+  useEffect(() => {
+    updateAddressBasedOnScreenSize();
+    window.addEventListener("resize", updateAddressBasedOnScreenSize);
+
+    return () => {
+      window.removeEventListener("resize", updateAddressBasedOnScreenSize);
+    };
+  }, []);
 
   const copyToClipboard = () => {
     navigator.clipboard.writeText(contractAddress).then(() => {
@@ -54,7 +72,7 @@ export default function StatisticsPanel() {
                 </div>
               </div>
               <div className={`${style.row} ${style.sec_row}`}>
-                <span>CA: {contractAddress}</span>
+                <span>CA: {shortenedAddress}</span>
                 <img
                   src={copy}
                   alt="Copy"
