@@ -1,11 +1,11 @@
 import "./index.css";
 import "./App.css";
-import HeroSection from "./components/heroSection/heroSection";
+import Screens from "./screens/screens";
 
 function App() {
   return (
     <div className="App">
-      <HeroSection />
+      <Screens />
     </div>
   );
 }
