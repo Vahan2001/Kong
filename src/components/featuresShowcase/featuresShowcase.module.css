@@ -1,0 +1,121 @@
+.kong_dys {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: relative; 
+    right: 8%; 
+    top: 60%; 
+    /* max-width: 100%;  */
+    /* padding: 10px;  */
+}
+
+.kong_banner {
+    width: 100%; 
+    max-width: 525px;
+    text-align: center; 
+    padding: 20px; 
+    border-radius: 8px; 
+    background-image: url("../../assets/images/Frame1.png"); 
+    background-size: cover; 
+    background-position: center; 
+    background-color: #FFE4B5; 
+    font-family: "Jingleberry"; 
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.kong_text {
+    font-size: 1.5rem; 
+    color: #000; 
+    line-height: 1.5; 
+}
+
+.kong_section {
+    display: flex;
+    width: 100%;
+}
+
+.kong-section-item {
+    height: 100vh;
+    background-size: cover; 
+    background-position: center; 
+    width: 33.3%;
+}
+
+.kong-section-left {
+    background-image: url("../../assets/images/degenKong1.png");
+}
+
+.kong-section-center {
+    background-image: url("../../assets/images/degenKong2.png");
+}
+
+.kong-section-right {
+    background-image: url("../../assets/images/degenKong3.png");
+}
+
+@media (max-width: 1024px) {
+    .kong_section {
+        flex-wrap: wrap;
+        flex-direction: column; 
+    }
+
+    .kong-section-item {
+        height: 70vh; 
+    }
+
+    .kong_banner {
+        max-width: 450px;
+    }
+
+    .kong_text {
+        font-size: 1.25rem; 
+    }
+
+    .kong_dis {
+        top: 150%;
+    }
+}
+
+@media (max-width: 768px) {
+    .kong_section {
+       flex-wrap: wrap;
+    }
+    .kong-section-item {
+
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .kong_section {
+        gap: 5px; 
+    }
+
+    .kong-section-item {
+        height: 40vh; 
+    }
+
+    .kong_banner {
+        width: 100%; 
+        padding: 10px; 
+    }
+
+    .kong_text {
+        font-size: 0.875rem; 
+    }
+
+    .kong_dis {
+        top: 120%; 
+    }
+}
+
+.text_layer {
+    position: relative;
+    display: inline-block;
+    color: #FFA500; 
+    text-shadow: -3px 3px #000; 
+    font-size: 2rem; 
+    font-weight: bold; 
+}
+
