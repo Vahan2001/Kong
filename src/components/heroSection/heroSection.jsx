@@ -1,4 +1,3 @@
-import { useRef } from "react";
 import RunningText from "../runningText/runningText";
 import kongHeadImg from "../../assets/images/kongHead.png";
 import twitterImg from "../../assets/images/twitter.png";
