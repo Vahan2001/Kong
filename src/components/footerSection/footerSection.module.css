@@ -1,0 +1,11 @@
+.footer__section {
+  background-image: url("../../assets/images/footersectionImg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 900px;
+}
+.content {
+  width: 588px;
+  height: 101px;
+  border-radius: 15px;
+}
