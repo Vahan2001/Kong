@@ -1,0 +1,26 @@
+.heroSection {
+  background-image: url("../../assets/images/Kong_Central.png");
+  background-size: contain;
+  background-position: center;
+  height: 907px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.content{
+  width: 775px;
+  height: 207px;
+  background-color: #FCD973;
+  margin-bottom: 80px;
+  border-radius: 16px;
+  padding: 24px;
+
+  & span{
+    font-size: 39px;
+  }
+}
+
+
+
+
+
