@@ -1,26 +1,85 @@
 .heroSection {
   background-image: url("../../assets/images/Kong_Central.png");
-  background-size: contain;
+  background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   height: 907px;
   display: flex;
   align-items: flex-end;
   justify-content: center;
 }
-.content{
+
+.content {
+  background-image: url("../../assets/images/backGround.jpg");
   width: 775px;
   height: 207px;
-  background-color: #FCD973;
-  margin-bottom: 80px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 60px;
   border-radius: 16px;
   padding: 24px;
-
-  & span{
-    font-size: 39px;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 70px;
+  border: 3px solid white;
+}
+.textLayer {
+  font-size: 39px;
+  font-family: "Jingleberry";
+  position: relative;
+  padding: 5px; 
+}
+.orange_text{
+  color: #FFB032;
+  text-shadow: 
+    2px 2px 0px black, 
+    -2px 2px 0px black, 
+    2px -2px 0px black,  
+    -2px -2px 0px black;
 }
 
 
+@media (max-width: 780px) {
 
+  .heroSection{
+    height: 812px;
+  }
 
+  .content{
+    width: 343px;
+    height: 176px;
+    margin-bottom: 10px;
+    background-size: cover;
+    line-height: 40px;
+  }
+  .textLayer {
+    font-size: 30px;
+    font-family: "Jingleberry";
+    position: relative;
+    padding: 5px; 
+  }
+}
 
+@media (max-width: 480px) {
+  .heroSection{
+    height: 812px;
+  }
+
+  .content{
+    width: 343px;
+    margin-bottom: 0px;
+    margin: 20px;
+    background-size: cover;
+    line-height: 30px;
+  }
+
+  .textLayer {
+    font-size: 26px;
+    font-family: "Jingleberry";
+    position: relative;
+    padding: 5px; 
+  }
+}
