@@ -11,6 +11,7 @@ export default function StatisticsPanel() {
   const contractAddress = "Cm6acA7PHfktYMBa7DK9vKJb4pzHeSr5gYvz1idMRnaf";
 
   const [shortenedAddress, setShortenedAddress] = useState(contractAddress);
+  const [currentNote, setCurrentNote] = useState(0);
 
   const updateAddressBasedOnScreenSize = () => {
     if (window.innerWidth <= 1024) {
@@ -32,8 +33,12 @@ export default function StatisticsPanel() {
   const copyToClipboard = () => {
     navigator.clipboard.writeText(contractAddress).then(() => {
     }).catch((err) => {
-      console.error('Failed to copy text: ', err);
+      console.error('dont copy', err);
     });
+  };
+
+  const handleDotClick = (index) => {
+    setCurrentNote(index);
   };
 
   return (
@@ -43,19 +48,32 @@ export default function StatisticsPanel() {
           <span className={style.textLayer}><span className={style.orange_text}>HOW</span> to buy <span className={style.orange_text}>$KONG?</span></span>
         </div>
         <div className={style.notes}>
-          <div className={style.note}>
-            <img src={firstImg} />
-          </div>
-          <div className={style.note}>
-            <img src={secondImg} />
-          </div>
-          <div className={style.note}>
-            <img src={thirdImg} />
-          </div>
-          <div className={style.note}>
-            <img src={fourthImg} />
+          <div className={style.notesWrapper}>
+            <div className={`${style.note} ${currentNote === 0 ? style.visible : ""}`}>
+              <img src={firstImg} />
+            </div>
+            <div className={`${style.note} ${currentNote === 1 ? style.visible : ""}`}>
+              <img src={secondImg} />
+            </div>
+            <div className={`${style.note} ${currentNote === 2 ? style.visible : ""}`}>
+              <img src={thirdImg} />
+            </div>
+            <div className={`${style.note} ${currentNote === 3 ? style.visible : ""}`}>
+              <img src={fourthImg} />
+            </div>
           </div>
         </div>
+        
+        <div className={style.dots}>
+          {[firstImg, secondImg, thirdImg, fourthImg].map((_, index) => (
+            <div
+              key={index}
+              className={`${style.dot} ${currentNote === index ? style.active : ""}`}
+              onClick={() => handleDotClick(index)}
+            />
+          ))}
+        </div>
+
         <div className={style.footer}>
           <div className={style.circle}>
             <img src={circle} />
@@ -76,7 +94,7 @@ export default function StatisticsPanel() {
                 <img
                   src={copy}
                   alt="Copy"
-                  onClick={copyToClipboard} 
+                  onClick={copyToClipboard}
                 />
               </div>
             </div>

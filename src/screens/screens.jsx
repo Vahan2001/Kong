@@ -6,7 +6,7 @@ export default function Screens() {
     <>
       {/* <HeroSection /> */}
       <CityOverview />
-      <FooterSection />
+      {/* <FooterSection /> */}
     </>
   );
 }
