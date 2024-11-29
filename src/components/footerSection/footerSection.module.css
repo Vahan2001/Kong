@@ -3,9 +3,27 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: 900px;
+  padding: 70px 0 0 100px;
 }
 .content {
   width: 588px;
   height: 101px;
   border-radius: 15px;
+  background-image: url("../../assets/images/footerBlockImg.png");
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+
+  & span {
+    font-family: "Jingleberry";
+    text-transform: uppercase;
+    font-size: 40px;
+    & span {
+      color: #ffb032;
+      text-shadow: 2px 2px 0px black, -2px 2px 0px black, 2px -2px 0px black,
+        -2px -2px 0px black;
+    }
+  }
 }

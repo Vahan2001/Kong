@@ -8,7 +8,12 @@ export default function FooterSection() {
         <RunningText />
       </div>
       <div className={style.footer__section}>
-        <div className={style.content}></div>
+        <div className={style.content}>
+          <span>
+            It's time to <span>$kong</span> it <span>$kong</span> it!
+          </span>
+        </div>
+        <footer></footer>
       </div>
     </div>
   );
