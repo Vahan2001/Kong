@@ -13,7 +13,7 @@ export default function FeaturesShowcase() {
                                     <span className={style.text_layer}>
                                         BANANA ZONE
                                     </span>
-                                        <p className={style.text}>is is also a place <br /> where the unexpected happens.</p>
+                                        is is also a place where the unexpected happens.
                                     <span className={style.text_layer}>
                                        KONG FEELS IT
                                     </span>

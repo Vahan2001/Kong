@@ -1,11 +1,13 @@
+@import "../../assets/fonts/fonts.css";
+
 .kong_dys {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
     position: relative; 
-    right: 8%; 
-    top: 60%; 
-    /* max-width: 100%;  */
+    right: 7%; 
+    top: 67%; 
+    max-width: 100%; 
     /* padding: 10px;  */
 }
 
@@ -13,40 +15,60 @@
     background-image: url("../../assets/images/Frame1.png"); 
     /* width: 100%;  */
     width: 525px;;
-    height: 210px;
+    /* height: 200px; */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    margin-bottom: 60px;
-    border-radius: 16px;
-    padding: 24px;
+    /* margin-bottom: 60px; */
+    border-radius: 10px;
+    /* padding: 14px; */
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    line-height: 70px;
-    border: 3px solid white;
+    line-height: 40px;
+    border: 1px solid white;
 }
 
 .kong_text {
-    font-size: 1.5rem; 
+    font-size: 24px;
     color: #000; 
-    line-height: 1.5;
     font-family: "Jingleberry";
+    position: relative;
+    padding: 5px
 }
 
 .kong_section {
     display: flex;
     width: 100%;
 }
+.text{
+    font-size: 24px;
+    font-family: "Jingleberry";
+    position: relative;
+    padding: 5px
+}
+.text_layer {
+    position: relative;
+    display: inline-block;
+    font-size: 2rem; 
+    font-weight: bold; 
+    font-family: "Jingleberry";
+    color: #FFB032;
+    text-shadow: 
+    2px 2px 0px black, 
+    -2px 2px 0px black, 
+    2px -2px 0px black,  
+    -2px -2px 0px black;
+}
 
 .kong-section-item {
-    height: 100vh;
+    height: 721px;
     background-size: cover; 
     background-position: center; 
     width: 33.3%;
-    object-fit: cover;
-    transition: background-color 0.5s ease-in-out;
+    /* object-fit: cover; */
+    /* transition: background-color 0.5s ease-in-out; */
 }
 
 .kong-section-left {
@@ -93,60 +115,117 @@
         object-fit: cover;
         transition: background-color 0.5s ease-in-out;  
     }
-    .kong_banner{
+    /* .kong_banner{
         margin: auto;
-    }
+    } */
     .kong_dys{
-        top: 70%; 
+        top: 75%; 
         height: 148px;
+        text-align: center;
+        margin: auto 0;
     }
-    .kong_text {
-        font-size: 30px;
+    .text_layer{
+        font-size: 25px;
+        font-family: "Jingleberry";
+        position: relative;
+        padding: 5px;
+  
+    }
+      .kong_text {
+        font-size: 16px;
         font-family: "Jingleberry";
         position: relative;
         padding: 5px; 
       }
 }
 
+@media  (max-width: 600px){
+    .kong_dys{
+        /* top: 75%;  */
+        /* height: 148px; */
+        /* text-align: center; */
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+    }
+    .text_layer{
+        font-size: 10px;
+        font-family: "Jingleberry";
+        position: relative;
+        padding: 5px;
+  
+    }
+      .kong_text {
+        font-size: 10px;
+        font-family: "Jingleberry";
+        position: relative;
+        padding: 5px; 
+      }
+}
+    
+
+
 @media (max-width: 480px) {
     .kong_section {
         gap: 5px; 
     }
-
+    .kong_dys{
+        width: 343px;
+        height: 148px;
+        margin-bottom: 0px;
+        margin: 20px;
+        background-size: cover;
+        line-height: 30px;
+        /* padding: 10px;  */
+      }
+      .text_layer{
+        font-size: 15px;
+        font-family: "Jingleberry";
+        position: relative;
+        padding: 5px;
+  
+    }
+      .kong_text {
+        font-size: 16px;
+        font-family: "Jingleberry";
+        position: relative;
+        padding: 5px; 
+      }
     .kong-section-item {
         height: 40vh; 
     }
-
+    /* .kong_dys{
+        top: 75%; 
+        height: 148px;
+        text-align: center;
+        margin: auto 0;
+    } */
     .kong_banner {
         width: 100%; 
-        padding: 10px; 
     }
 
-    .kong_text {
+    /* .kong_text {
         font-size: 0.875rem; 
-    }
+    } */
 
     .kong_dis {
         top: 120%; 
     }
 }
-.text{
-    font-size: 39px;
-    font-family: "Jingleberry";
-    position: relative;
-    padding: 5px
-}
-.text_layer {
-    position: relative;
-    display: inline-block;
-    font-size: 2rem; 
-    font-weight: bold; 
-    font-family: "Jingleberry";
-    color: #FFB032;
-  text-shadow: 
-    2px 2px 0px black, 
-    -2px 2px 0px black, 
-    2px -2px 0px black,  
-    -2px -2px 0px black;
+
+@media (max-width: 375px) {
+    .kong_section {
+        gap: 5px; 
+    }
+    .kong_dys{
+        top: 5%; 
+        right: 10%;
+        height: 148px;
+        text-align: center;
+        margin: auto 0;
+        padding: 10px; 
+        width: 349px;
+        height: 154px;
+    }
 }
 
