@@ -10,19 +10,14 @@ export default function FeaturesShowcase() {
                         <div className={style.kong_dys}>
                             <div className={style.kong_banner}>
                                 <p className={style.kong_text}>
-                                    <span className={style.text_layer}>
-                                        BANANA ZONE
-                                    </span>
-                                        <p className={style.text}>is is also a place <br /> where the unexpected happens.</p>
-                                    <span className={style.text_layer}>
-                                       KONG FEELS IT
-                                    </span>
+                                     <span className={style.text_layer}>BANANA ZONE</span>
+                                            is is also a place <br/>where the unexpected happens.<br/>
+                                     <span className={style.text_layer}>KONG FEELS IT</span>
                                 </p>
                             </div>
                         </div>
                     </div>
             </div>
-      
     </div>
   );
 }

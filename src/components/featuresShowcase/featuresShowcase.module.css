@@ -1,38 +1,34 @@
+@import "../../assets/fonts/fonts.css";
+
 .kong_dys {
+    width: 100%; 
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
     position: relative; 
-    right: 8%; 
-    top: 60%; 
-    /* max-width: 100%;  */
-    /* padding: 10px;  */
+    right: 11%; 
+    bottom: -31rem; 
+    align-items: center;
+    /* padding: 5px; */
 }
 
 .kong_banner {
     background-image: url("../../assets/images/Frame1.png"); 
-    /* width: 100%;  */
-    width: 525px;;
-    height: 210px;
-    background-size: cover;
+    width: 525px;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    margin-bottom: 60px;
-    border-radius: 16px;
-    padding: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    line-height: 70px;
-    border: 3px solid white;
+    line-height: 30px;
 }
 
 .kong_text {
-    font-size: 1.5rem; 
+    font-size: 30px;
     color: #000; 
-    line-height: 1.5;
     font-family: "Jingleberry";
+    position: relative;
+    padding: 15px
 }
 
 .kong_section {
@@ -40,13 +36,26 @@
     width: 100%;
 }
 
+.text_layer {
+    font-size: 30px;
+    position: relative;
+    font-family: "Jingleberry";
+    color: #FFB032;
+    text-shadow: 
+    2px 2px 0px black, 
+    -2px 2px 0px black, 
+    2px -2px 0px black,  
+    -2px -2px 0px black;
+}
+
 .kong-section-item {
-    height: 100vh;
+  height: 100%;
+  min-height: 721px;
     background-size: cover; 
     background-position: center; 
     width: 33.3%;
     object-fit: cover;
-    transition: background-color 0.5s ease-in-out;
+    /* transition: background-color 0.5s ease-in-out; */
 }
 
 .kong-section-left {
@@ -60,30 +69,53 @@
 .kong-section-right {
     background-image: url("../../assets/images/degenKong3.png");
 }
-
+@media (max-width: 1224px) {
+    .kong_text{
+        font-size:26px;
+    }
+}
 @media (max-width: 1024px) {
-    /* .kong_section {
-        flex-wrap: wrap;
-        flex-direction: column; 
-    } */
+    .kong_section {
+        flex-direction: row;
+    }
 
-    /* .kong-section-item {
-        height: 70vh; 
-    } */
+    .kong-section-item {
+        /* min-height: 500px; */
+    }
 
     .kong_banner {
-        max-width: 450px;
+        width: 500px;
     }
 
     .kong_text {
-        font-size: 1.25rem; 
+        font-size: 20px;
+    }
+    .text_layer{
+        font-size: 20px;
     }
 
     .kong_dis {
-        top: 150%;
     }
 }
+@media (max-width:920px) {
+    .kong_banner {
+        width: 500px;
+    }
+    .kong_text {
+        font-size: 16px;
+    }
+    .text_layer{
+        font-size: 16px;
+    }
+    .kong_dys{
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        right: 0px;
 
+    }
+    
+}
 @media (max-width: 780px) {
     .kong_section {
        flex-wrap: wrap;
@@ -94,59 +126,70 @@
         transition: background-color 0.5s ease-in-out;  
     }
     .kong_banner{
+        width: 450px;
         margin: auto;
+        justify-content: center;
+        align-items: center;
     }
     .kong_dys{
-        top: 70%; 
-        height: 148px;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        right: 0;
     }
-    .kong_text {
-        font-size: 30px;
-        font-family: "Jingleberry";
-        position: relative;
-        padding: 5px; 
+    .text_layer{
+        font-size: 20px;
+    }
+      .kong_text {
+        font-size: 28px;
       }
 }
 
+@media  (max-width: 600px){
+    .kong_banner{
+        width: 300px;
+        display: flex;
+        text-align: center;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+    }
+    .kong_dys{
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+    }
+    .text_layer{
+        font-size: 22px;
+    }
+      .kong_text {
+        font-size: 22px;
+      }
+}
+    
+
 @media (max-width: 480px) {
-    .kong_section {
-        gap: 5px; 
-    }
-
-    .kong-section-item {
-        height: 40vh; 
-    }
-
     .kong_banner {
         width: 100%; 
-        padding: 10px; 
     }
-
-    .kong_text {
-        font-size: 0.875rem; 
+    .text_layer{
+        font-size: 22px;
     }
-
-    .kong_dis {
-        top: 120%; 
-    }
+      .kong_text {
+        font-size: 22px;
+      }
 }
-.text{
-    font-size: 39px;
-    font-family: "Jingleberry";
-    position: relative;
-    padding: 5px
-}
-.text_layer {
-    position: relative;
-    display: inline-block;
-    font-size: 2rem; 
-    font-weight: bold; 
-    font-family: "Jingleberry";
-    color: #FFB032;
-  text-shadow: 
-    2px 2px 0px black, 
-    -2px 2px 0px black, 
-    2px -2px 0px black,  
-    -2px -2px 0px black;
+
+@media (max-width: 375px) {
+    .kong_dys{
+        text-align: center;
+        margin: auto 0;
+    }
+    .text_layer{
+        font-size: 20px;
+    }
+      .kong_text {
+        font-size: 20px;
+      }
 }
 
