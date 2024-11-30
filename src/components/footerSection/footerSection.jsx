@@ -16,6 +16,7 @@ export default function FooterSection() {
             It's time to <span>$kong</span> it <span>$kong</span> it!
           </span>
         </div>
+        <div className={style.media__block}></div>
       </div>
       <footer>
         <div className={style.footer__flex}>
@@ -42,11 +43,17 @@ export default function FooterSection() {
           </div>
           <div className={style.icon}>
             <div className={style.tele__and__tw}>
-              <img src={telegramImg} alt="telegram" />
-              <img src={twitterImg} alt="twitter" />
+              <div className={style.tele__blok}>
+                <img src={telegramImg} alt="telegram" />
+              </div>
+              <div className={style.twitter__blok}>
+                <img src={twitterImg} alt="twitter" />
+              </div>
             </div>
-            <span>© KONG 2024 - All rights reserved</span>
           </div>
+        </div>
+        <div className={style.copyright}>
+          <span>© KONG 2024 - All rights reserved</span>
         </div>
       </footer>
     </div>

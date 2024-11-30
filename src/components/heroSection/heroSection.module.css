@@ -168,8 +168,23 @@
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 480px) {
   .heroSection {
     height: 800px;
+  }
+  .text__back__img {
+    display: none;
+  }
+  .text__mobile {
+    background-image: url("../../assets/images/mobileherosec.png");
+    background-repeat: no-repeat;
+    width: 90%;
+    height: 175px;
+    order: 3;
+    background-position: center;
+    background-size: contain;
+  }
+  .content__buttons {
+    width: 50%;
   }
 }

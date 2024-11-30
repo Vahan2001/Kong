@@ -1,4 +1,3 @@
-import { useRef } from "react";
 import RunningText from "../runningText/runningText";
 import kongHeadImg from "../../assets/images/kongHead.png";
 import twitterImg from "../../assets/images/twitter.png";
@@ -36,6 +35,7 @@ export default function HeroSection() {
               <p>The Banana Zone King</p>
             </div>
           </div>
+          <div className={style.text__mobile}></div>
           <div className={style.content__buttons}>
             <div className={style.twitter__btn}>
               <img src={twitterImg} alt="Twitter" />

@@ -8,9 +8,8 @@ export default function Screens() {
     <>
       <HeroSection />
       <CityOverview />
-      <FeaturesShowcase/>
-      <FooterSection />
       <StatisticsPanel />
+      <FooterSection />
     </>
   );
 }
