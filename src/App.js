@@ -5,7 +5,7 @@ import Screens from "./screens/screens";
 function App() {
   return (
     <div className="App">
-      <Screens />
+      <Screens/>
     </div>
   );
 }
