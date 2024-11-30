@@ -7,7 +7,6 @@
     right: 11%; 
     bottom: -31rem; 
     align-items: center;
-    /* padding: 5px; */
 }
 
 .kong_banner {
@@ -20,11 +19,11 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    line-height: 30px;
+    line-height: 45px;
 }
 
 .kong_text {
-    font-size: 30px;
+    font-size: 35px;
     color: #000; 
     font-family: "Jingleberry";
     position: relative;
@@ -37,7 +36,7 @@
 }
 
 .text_layer {
-    font-size: 30px;
+    font-size: 35px;
     position: relative;
     font-family: "Jingleberry";
     color: #FFB032;
@@ -69,50 +68,70 @@
 .kong-section-right {
     background-image: url("../../assets/images/degenKong3.png");
 }
-@media (max-width: 1224px) {
+@media (max-width: 1420px) {
+    .kong_text{
+        font-size:30px;
+    }
+    .text_layer{
+        font-size:30px;
+    }
+    .kong_banner {
+        width: 525px;
+        line-height: 38px;
+    }
+}
+@media (max-width: 1220px) {
     .kong_text{
         font-size:26px;
     }
+    .text_layer{
+        font-size:26px;
+    }
+    .kong_banner {
+        width: 525px;
+        line-height: 28px;
+    }
 }
-@media (max-width: 1024px) {
+@media (max-width: 1100px) {
     .kong_section {
         flex-direction: row;
     }
-
-    .kong-section-item {
-        /* min-height: 500px; */
-    }
-
     .kong_banner {
-        width: 500px;
+        width: 525px;
+        line-height: 24px;
     }
 
     .kong_text {
-        font-size: 20px;
+        font-size: 22px;
     }
     .text_layer{
-        font-size: 20px;
-    }
-
-    .kong_dis {
+        font-size: 22px;
     }
 }
-@media (max-width:920px) {
+@media (max-width:994px) {
+    .kong_section {
+        flex-wrap: wrap;
+     }
+     .kong-section-item {
+        width: 100%;
+        object-fit: cover;
+    }
     .kong_banner {
-        width: 500px;
+        width: 525px;
+        line-height: 30px;
     }
     .kong_text {
-        font-size: 16px;
+        font-size: 30px;
     }
     .text_layer{
-        font-size: 16px;
+        font-size: 30px;
     }
     .kong_dys{
         display: flex;
         justify-content: center;
+        align-items: center;
         margin: auto;
-        right: 0px;
-
+        right: 5%;
     }
     
 }
@@ -123,10 +142,9 @@
     .kong-section-item {
         width: 100%;
         object-fit: cover;
-        transition: background-color 0.5s ease-in-out;  
     }
     .kong_banner{
-        width: 450px;
+        width: 500px;
         margin: auto;
         justify-content: center;
         align-items: center;
@@ -135,17 +153,40 @@
         display: flex;
         justify-content: center;
         margin: auto;
-        right: 0;
+        right: 0px;
     }
     .text_layer{
         font-size: 20px;
     }
       .kong_text {
-        font-size: 28px;
+        font-size: 20px;
       }
 }
 
 @media  (max-width: 600px){
+    .kong_banner{
+        width: 390px;
+        display: flex;
+        text-align: center;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+    }
+    .kong_dys{
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+    }
+    .text_layer{
+        font-size: 18px;
+    }
+      .kong_text {
+        font-size: 18px;
+      }
+}
+    
+
+@media (max-width: 480px) {
     .kong_banner{
         width: 300px;
         display: flex;
@@ -160,23 +201,10 @@
         align-items: center;
     }
     .text_layer{
-        font-size: 22px;
+        font-size: 18px;
     }
       .kong_text {
-        font-size: 22px;
-      }
-}
-    
-
-@media (max-width: 480px) {
-    .kong_banner {
-        width: 100%; 
-    }
-    .text_layer{
-        font-size: 22px;
-    }
-      .kong_text {
-        font-size: 22px;
+        font-size: 18px;
       }
 }
 
@@ -186,10 +214,10 @@
         margin: auto 0;
     }
     .text_layer{
-        font-size: 20px;
+        font-size: 18px;
     }
       .kong_text {
-        font-size: 20px;
+        font-size: 18px;
       }
 }
 
