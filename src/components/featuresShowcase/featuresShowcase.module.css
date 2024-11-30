@@ -131,7 +131,7 @@
         justify-content: center;
         align-items: center;
         margin: auto;
-        right: 5%;
+        right: 0%;
     }
     
 }
@@ -144,7 +144,7 @@
         object-fit: cover;
     }
     .kong_banner{
-        width: 500px;
+        width: 400px;
         margin: auto;
         justify-content: center;
         align-items: center;
@@ -154,18 +154,19 @@
         justify-content: center;
         margin: auto;
         right: 0px;
+        top: 28%;
     }
     .text_layer{
-        font-size: 20px;
+        font-size: 26px;
     }
       .kong_text {
-        font-size: 20px;
+        font-size: 26px;
       }
 }
 
 @media  (max-width: 600px){
     .kong_banner{
-        width: 390px;
+        width: 343px;
         display: flex;
         text-align: center;
         margin: auto;
@@ -178,10 +179,10 @@
         align-items: center;
     }
     .text_layer{
-        font-size: 18px;
+        font-size: 24px;
     }
       .kong_text {
-        font-size: 18px;
+        font-size: 24px;
       }
 }
     
@@ -201,10 +202,10 @@
         align-items: center;
     }
     .text_layer{
-        font-size: 18px;
+        font-size: 22px;
     }
       .kong_text {
-        font-size: 18px;
+        font-size: 22px;
       }
 }
 
