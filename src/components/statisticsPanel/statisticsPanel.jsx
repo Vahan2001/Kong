@@ -42,7 +42,6 @@ export default function StatisticsPanel() {
   };
 
   return (
-    <div className="container">
       <div className={style.statisticsSection}>
         <div className={style.header}>
           <span className={style.textLayer}><span className={style.orange_text}>HOW</span> to buy <span className={style.orange_text}>$KONG?</span></span>
@@ -101,6 +100,5 @@ export default function StatisticsPanel() {
           </div>
         </div>
       </div>
-    </div>
   );
 }
