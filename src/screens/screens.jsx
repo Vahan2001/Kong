@@ -8,6 +8,7 @@ export default function Screens() {
     <div className="container">
       <HeroSection />
       <CityOverview />
+      <FeaturesShowcase />
       <StatisticsPanel />
       <FooterSection />
     </div>
