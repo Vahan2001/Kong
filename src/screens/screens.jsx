@@ -5,7 +5,7 @@ import FooterSection from "../components/footerSection/footerSection";
 import StatisticsPanel from "../components/statisticsPanel/statisticsPanel";
 export default function Screens() {
   return (
-    <div className="container">
+    <div>
       <HeroSection />
       <CityOverview />
       <FeaturesShowcase />

@@ -7,6 +7,7 @@ import style from "./heroSection.module.css";
 export default function HeroSection() {
   return (
     <div className={style.heroSection}>
+      <div className={style.container}> 
       <div className={style.content}>
         <div className={style.kong__head}>
           <img src={kongHeadImg} alt="Kong Head" />
@@ -46,6 +47,7 @@ export default function HeroSection() {
       </div>
       <div className={style.running__text__block}>
         <RunningText />
+      </div>
       </div>
     </div>
   );
