@@ -1,15 +1,19 @@
 .heroSection {
   background-image: url("../../assets/images/Asset.png");
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
   position: relative;
-  height: 954px;
+  height: 1200px;
   & .content {
     padding-top: 30px;
     display: flex;
     align-items: start;
-    justify-content: space-around;
+    justify-content: space-between;
   }
+}
+.text__mobile {
+  display: none;
 }
 .kong__head {
   width: 20%;
@@ -112,9 +116,6 @@
 
 /* Media Queries */
 @media (max-width: 1024px) {
-  .container {
-    width: 90%;
-  }
   .kong__head {
     width: 15%;
     text-align: center;
@@ -141,11 +142,12 @@
 }
 
 @media (max-width: 768px) {
-  .content {
-    padding-top: 30px;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
+  .heroSection {
+    & .content {
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
   }
   .kong__head {
     width: 30%;
@@ -171,9 +173,17 @@
 @media (max-width: 480px) {
   .heroSection {
     height: 800px;
+
+    & .content {
+      align-items: start;
+      justify-content: space-around;
+    }
   }
   .text__back__img {
     display: none;
+  }
+  .text__mobile {
+    display: block;
   }
   .text__mobile {
     background-image: url("../../assets/images/mobileherosec.png");
