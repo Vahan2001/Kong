@@ -107,6 +107,25 @@ footer {
     }
   }
 }
+.tele__blok,
+.twitter__blok {
+  & img:hover {
+    cursor: pointer;
+    transition-duration: 0.5s;
+    transform: scale(1.1);
+    color: #ff9d00;
+  }
+}
+.tele__blok {
+  & img:hover {
+    content: url("../../assets/images/telegram2.png");
+  }
+}
+.twitter__blok {
+  & img:hover {
+    content: url("../../assets/images/twitter2.png");
+  }
+}
 .copyright {
   display: flex;
   justify-content: end;

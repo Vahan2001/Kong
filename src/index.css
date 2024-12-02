@@ -19,25 +19,25 @@ code {
   margin: 0 auto;
 }
 
-@media (max-width: 1380px) {
+@media (max-width: 1480px) {
   .container {
     width: 1200px;
   }
 }
 
-@media (max-width: 1210px) {
+@media (max-width: 1290px) {
   .container {
     width: 900px;
   }
 }
 
-@media (max-width: 910px) {
+@media (max-width: 1010px) {
   .container {
     width: 700px;
   }
 }
 
-@media (max-width: 710px) {
+@media (max-width: 840px) {
   .container {
     width: 80%;
     padding: 0 15px;

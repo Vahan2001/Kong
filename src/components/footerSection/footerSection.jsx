@@ -1,7 +1,7 @@
 import RunningText from "../runningText/runningText";
 import kongHeadImg from "../../assets/images/kongHead.png";
-import twitterImg from "../../assets/images/twitter2.png";
-import telegramImg from "../../assets/images/telegram2.png";
+import twitterImg from "../../assets/images/defaulttw.png";
+import telegramImg from "../../assets/images/defaulttele.png";
 import style from "./footerSection.module.css";
 
 export default function FooterSection() {

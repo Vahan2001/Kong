@@ -10,17 +10,17 @@ export default function FeaturesShowcase() {
         <div
           className={`${style["kong-section-item"]} ${style["kong-section-left"]}`}
         >
-          <img src={kongHeadImg1} alt="" />
+          <img src={kongHeadImg1} alt="KongHead" />
         </div>
         <div
           className={`${style["kong-section-item"]} ${style["kong-section-center"]}`}
         >
-          <img src={kongHeadImg2} alt="" />
+          <img src={kongHeadImg2} alt="KongHead" />
         </div>
         <div
           className={`${style["kong-section-item"]} ${style["kong-section-right"]}`}
         >
-          <img src={kongHeadImg3} alt="" />
+          <img src={kongHeadImg3} alt="KongHead" />
         </div>
       </div>
       <div className="container">

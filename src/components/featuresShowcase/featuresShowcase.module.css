@@ -76,14 +76,10 @@
   }
 }
 @media (max-width: 1100px) {
-  .kong_section {
-    flex-direction: row;
-  }
   .kong_banner {
     width: 525px;
     line-height: 24px;
   }
-
   .kong_text {
     font-size: 22px;
   }
@@ -92,15 +88,19 @@
   }
 }
 @media (max-width: 994px) {
-  .kong_section {
+  .kong-section-item {
+    & img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .kong_img__blokes {
     flex-wrap: wrap;
   }
   .kong-section-item {
     width: 100%;
-    object-fit: cover;
   }
   .kong_banner {
-    width: 525px;
     line-height: 30px;
   }
   .kong_text {
@@ -110,6 +110,7 @@
     font-size: 30px;
   }
   .kong_dys {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -121,22 +122,8 @@
   .kong_section {
     flex-wrap: wrap;
   }
-  .kong-section-item {
-    width: 100%;
-    object-fit: cover;
-  }
   .kong_banner {
     width: 400px;
-    margin: auto;
-    justify-content: center;
-    align-items: center;
-  }
-  .kong_dys {
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    right: 0px;
-    top: 28%;
   }
   .text_layer {
     font-size: 26px;
@@ -149,16 +136,10 @@
 @media (max-width: 600px) {
   .kong_banner {
     width: 343px;
-    display: flex;
     text-align: center;
-    margin: auto;
-    justify-content: center;
-    align-items: center;
   }
   .kong_dys {
     margin: 0 auto;
-    justify-content: center;
-    align-items: center;
   }
   .text_layer {
     font-size: 24px;
@@ -171,17 +152,8 @@
 @media (max-width: 480px) {
   .kong_banner {
     width: 300px;
-    display: flex;
-    text-align: center;
-    margin: auto;
-    justify-content: center;
-    align-items: center;
   }
-  .kong_dys {
-    margin: 0 auto;
-    justify-content: center;
-    align-items: center;
-  }
+
   .text_layer {
     font-size: 22px;
   }
@@ -193,7 +165,6 @@
 @media (max-width: 375px) {
   .kong_dys {
     text-align: center;
-    margin: auto 0;
   }
   .text_layer {
     font-size: 18px;
