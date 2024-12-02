@@ -5,7 +5,7 @@
     display: flex;
     position: relative; 
     right: 11%; 
-    bottom: -31rem; 
+    bottom: -30rem; 
     align-items: center;
 }
 
@@ -48,13 +48,13 @@
 }
 
 .kong-section-item {
-  height: 100%;
-  min-height: 721px;
-    background-size: cover; 
-    background-position: center; 
     width: 33.3%;
+    height: 100%;
+    min-height: 721px;
+    background-size: cover; 
+    /* background-position: center;  */
+    background-repeat: no-repeat;
     object-fit: cover;
-    /* transition: background-color 0.5s ease-in-out; */
 }
 
 .kong-section-left {
@@ -68,6 +68,7 @@
 .kong-section-right {
     background-image: url("../../assets/images/degenKong3.png");
 }
+
 @media (max-width: 1420px) {
     .kong_text{
         font-size:30px;
