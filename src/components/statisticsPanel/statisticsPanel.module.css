@@ -47,10 +47,47 @@
 .note {
   width: 50%;
   height: 50%;
-  & img {
-    width: 108%;
-    height: 106%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  & span{
+    font-family: "Jingleberry";
+    color: black; 
+    font-size: 20px
   }
+}
+
+.first_note {
+  background-image: url('../../assets/images/first.png');
+  
+}
+.second_note{
+  background-image: url('../../assets/images/second.png');
+}
+
+.third_note{
+  background-image: url('../../assets/images/three.png');
+}
+
+.fourth_note{
+  background-image: url('../../assets/images/four.png');
+}
+
+.four_span{
+  text-align: center !important;
+}
+
+.desc{
+  width: 80% !important;
+  font-size: 16px !important;
+  text-align: center !important;
+  font-family: "Syne" !important;
+  margin-bottom: 40px;
+  line-height: 200%;
 }
 
 .footer {
@@ -101,7 +138,7 @@
   }
 }
 .first_row {
-  border-top-right-radius: 16px;
+  border-radius: 16px;
   width: 286px;
   height: 101px;
   background-image: url("../../assets/images/copy.png");
@@ -125,6 +162,7 @@
   background-size: cover;
   background-position: right;
   background-repeat: no-repeat;
+  border-radius: 16px;
   & img {
     margin-left: 10px;
     width: 24px;
@@ -189,6 +227,7 @@
   }
   .circle {
     width: 250px;
+    height: 250px;
   }
   .footer_head {
     font-size: 48px;
@@ -234,7 +273,8 @@
 
   .note.visible {
     opacity: 1;
-    display: block;
+    display: flex;
+    width: 300px;
   }
 
   .dots {
