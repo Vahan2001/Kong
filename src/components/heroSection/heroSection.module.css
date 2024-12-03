@@ -102,12 +102,24 @@
 }
 .twitter__btn:hover img {
   cursor: pointer;
-  content: url("../../assets/images/twitter2.png");
+  transition-duration: 0.5s;
+  transform: scale(1.1);
+  content: url("../../assets/images/tg_1.png");
+}
+.twitter__btn:active img {
+  cursor: pointer;
+  content: url("../../assets/images/tg_2.png");
 }
 
 .telegram__btn:hover img {
   cursor: pointer;
-  content: url("../../assets/images/telegram2.png");
+  transition-duration: 0.5s;
+  transform: scale(1.1);
+  content: url("../../assets/images/tw_1.png");
+}
+.telegram__btn:active img {
+  cursor: pointer;
+  content: url("../../assets/images/tw_2.png");
 }
 .running__text__block {
   position: absolute;
