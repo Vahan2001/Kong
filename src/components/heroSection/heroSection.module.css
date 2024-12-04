@@ -4,12 +4,13 @@
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
-  height: 1200px;
+  height: 1440px;
   & .content {
     padding-top: 30px;
     display: flex;
     align-items: start;
     justify-content: space-between;
+    margin: 0 20px;
   }
 }
 .text__mobile {
@@ -96,7 +97,7 @@
 .content__buttons {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: end;
   gap: 10px;
   width: 20%;
 }
@@ -122,6 +123,7 @@
   content: url("../../assets/images/tw_2.png");
 }
 .running__text__block {
+  width: 100%;
   position: absolute;
   bottom: 0;
 }

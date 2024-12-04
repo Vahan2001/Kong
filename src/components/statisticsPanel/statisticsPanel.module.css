@@ -1,9 +1,9 @@
 .statisticsSection {
   background-image: url("../../assets/images/fouurth_section.png");
   background-size: cover;
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
-  height: 1500px;
+  height: 1440px;
   padding: 72px 64px;
 }
 
@@ -54,34 +54,33 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  & span{
+  & span {
     font-family: "Jingleberry";
-    color: black; 
-    font-size: 20px
+    color: black;
+    font-size: 20px;
   }
 }
 
 .first_note {
-  background-image: url('../../assets/images/first.png');
-  
+  background-image: url("../../assets/images/first.png");
 }
-.second_note{
-  background-image: url('../../assets/images/second.png');
-}
-
-.third_note{
-  background-image: url('../../assets/images/three.png');
+.second_note {
+  background-image: url("../../assets/images/second.png");
 }
 
-.fourth_note{
-  background-image: url('../../assets/images/four.png');
+.third_note {
+  background-image: url("../../assets/images/three.png");
 }
 
-.four_span{
+.fourth_note {
+  background-image: url("../../assets/images/four.png");
+}
+
+.four_span {
   text-align: center !important;
 }
 
-.desc{
+.desc {
   width: 80% !important;
   font-size: 16px !important;
   text-align: center !important;
@@ -154,7 +153,6 @@
   height: 101px;
 }
 .sec_row {
-  border-top-right-radius: 16px;
   background-image: url("../../assets/images/copy.png");
   display: flex;
   align-items: center;
@@ -168,6 +166,10 @@
     width: 24px;
     height: 24px;
     cursor: pointer;
+  }
+  &:hover {
+    cursor: pointer;
+    opacity: 0.8;
   }
 }
 

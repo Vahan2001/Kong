@@ -2,9 +2,9 @@
   background-image: url("../../assets/images/footersectionImg.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
-  height: 1200px;
-  padding: 70px 0 0 100px;
+  background-position: top;
+  height: 1440px;
+  padding: 70px 100px 0 100px;
 }
 .content {
   width: 588px;
@@ -39,7 +39,7 @@ footer {
     & .head__and__text {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 20px;
 
       & p {
         display: flex;
@@ -107,16 +107,9 @@ footer {
     }
   }
 }
-/* .tele__blok,
-.twitter__blok {
-  & img:hover {
-    cursor: pointer;
-
-    color: #ff9d00;
-  }
-} */
 .tele__blok {
   & img:hover {
+    cursor: pointer;
     content: url("../../assets/images/telegram2.png");
   }
 }
@@ -128,6 +121,7 @@ footer {
 }
 .twitter__blok {
   & img:hover {
+    cursor: pointer;
     content: url("../../assets/images/twitter2.png");
   }
 
@@ -136,7 +130,6 @@ footer {
       content: url("../../assets/images/tw_4.png");
     }
   }
-
 }
 .copyright {
   display: flex;

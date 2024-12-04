@@ -1,9 +1,9 @@
 .heroSection {
   background-image: url("../../assets/images/Kong_Central.png");
   background-size: cover;
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
-  height: 907px;
+  height: 1440px;
   display: flex;
   align-items: flex-end;
   justify-content: center;
