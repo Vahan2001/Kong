@@ -2,11 +2,42 @@ import RunningText from "../runningText/runningText";
 import kongHeadImg from "../../assets/images/kongHead.png";
 import twitterImg from "../../assets/images/twitter.png";
 import telegramImg from "../../assets/images/telegram.png";
+import animationKong from "../../assets/videos/Kong_Rin2.mp4";
 import style from "./heroSection.module.css";
+import { useEffect, useRef } from "react";
 
 export default function HeroSection() {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const videoElement = videoRef.current;
+    if (videoElement) {
+      videoElement.addEventListener("ended", () => {
+        document
+          .querySelector(`.${style.text__back__img}`)
+          .classList.add(style.visible);
+      });
+    }
+
+    return () => {
+      if (videoElement) {
+        videoElement.removeEventListener("ended", () => {
+          document
+            .querySelector(`.${style.text__back__img}`)
+            .classList.add(style.visible);
+        });
+      }
+    };
+  }, []);
+
   return (
     <div className={style.heroSection}>
+      <div className={style.videoBackground}>
+        <video ref={videoRef} autoPlay muted>
+          <source src={animationKong} type="video/mp4" />
+        </video>
+      </div>
+
       <div className="container">
         <div className={style.content}>
           <div className={style.kong__head}>
@@ -32,7 +63,7 @@ export default function HeroSection() {
                   <span className={style.gBottomLayer}>G</span>
                 </span>
               </h1>
-              <p>The Banana Zone King</p>
+              <p>MISSION TO BANANA ZONE</p>
             </div>
           </div>
           <div className={style.text__mobile}></div>

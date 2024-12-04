@@ -16,6 +16,7 @@ export default function StatisticsPanel() {
   const [currentImage, setCurrentImage] = useState(copy);
   const headerRef = useRef(null);
   const notesRef = useRef(null);
+  const footerRef = useRef(null);
 
   const updateAddressBasedOnScreenSize = () => {
     if (window.innerWidth <= 1024) {
@@ -68,10 +69,12 @@ export default function StatisticsPanel() {
 
     if (headerRef.current) observer.observe(headerRef.current);
     if (notesRef.current) observer.observe(notesRef.current);
+    if (footerRef.current) observer.observe(footerRef.current);
 
     return () => {
       if (headerRef.current) observer.unobserve(headerRef.current);
       if (notesRef.current) observer.unobserve(notesRef.current);
+      if (footerRef.current) observer.unobserve(footerRef.current);
     };
   }, []);
 
@@ -147,7 +150,7 @@ export default function StatisticsPanel() {
         ))}
       </div>
 
-      <div className={style.footer}>
+      <div ref={footerRef} className={`${style.footer} ${style.hidden}`}>
         <div className={style.circle}>
           <img src={circle} />
         </div>

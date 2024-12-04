@@ -1,10 +1,7 @@
 .heroSection {
-  background-image: url("../../assets/images/Asset.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   position: relative;
   height: 1440px;
+  overflow: hidden;
   & .content {
     padding-top: 30px;
     display: flex;
@@ -12,6 +9,21 @@
     justify-content: space-between;
     margin: 0 20px;
   }
+}
+.videoBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.videoBackground video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
 }
 .text__mobile {
   display: none;
@@ -23,6 +35,11 @@
   background-image: url("../../assets/images/backImgText.png");
   background-repeat: no-repeat;
   padding: 10px 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.text__back__img.visible {
+  opacity: 1;
 }
 .text {
   width: 468px;
@@ -87,7 +104,7 @@
   }
 
   & p {
-    font-size: 43px;
+    font-size: 36px;
     display: flex;
     justify-content: space-evenly;
     margin: 0;
@@ -128,7 +145,6 @@
   bottom: 0;
 }
 
-/* Media Queries */
 @media (max-width: 1024px) {
   .kong__head {
     width: 15%;
