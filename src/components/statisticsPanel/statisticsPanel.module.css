@@ -1,5 +1,5 @@
 .statisticsSection {
-  background-image: url("../../assets/images/fouurth_section.png");
+  background-image: url("../../assets/images/fourth.jpg");
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
@@ -19,6 +19,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.hidden {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .textLayer {

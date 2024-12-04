@@ -1,5 +1,5 @@
 .heroSection {
-  background-image: url("../../assets/images/Kong_Central.png");
+  background-image: url("../../assets/images/Kong_Central.jpg");
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
@@ -29,6 +29,17 @@
   line-height: 70px;
   border: 3px solid white;
 }
+.content {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.content.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .textLayer {
   font-size: 39px;
   font-family: "Jingleberry";

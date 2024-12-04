@@ -1,9 +1,31 @@
+import { useEffect, useRef } from "react";
 import style from "./featuresShowcase.module.css";
-import kongHeadImg1 from "../../assets/images/degenKong1.png";
-import kongHeadImg2 from "../../assets/images/degenKong2.png";
-import kongHeadImg3 from "../../assets/images/degenKong3.png";
+import kongHeadImg1 from "../../assets/images/degenKong1.jpg";
+import kongHeadImg2 from "../../assets/images/degenKong2.jpg";
+import kongHeadImg3 from "../../assets/images/degenKong3.jpg";
 
 export default function FeaturesShowcase() {
+  const kongDysRef = useRef(null);
+
+  useEffect(() => {
+    const onScroll = () => {
+      if (kongDysRef.current) {
+        const rect = kongDysRef.current.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+
+        if (rect.top < windowHeight && rect.bottom > 0) {
+          kongDysRef.current.classList.add(style.visible);
+        }
+      }
+    };
+
+    window.addEventListener("scroll", onScroll);
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+    };
+  }, []);
+
   return (
     <div className={style.kong_section}>
       <div className={style.kong_img__blokes}>
@@ -24,7 +46,7 @@ export default function FeaturesShowcase() {
         </div>
       </div>
       <div className="container">
-        <div className={style.kong_dys}>
+        <div className={style.kong_dys} ref={kongDysRef}>
           <div className={style.kong_banner}>
             <p className={style.kong_text}>
               <span className={style.text_layer}>BANANA ZONE</span>

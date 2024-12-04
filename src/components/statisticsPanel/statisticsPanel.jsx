@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import style from "./statisticsPanel.module.css";
 import secondImg from "../../assets/images/second.png";
 import firstImg from "../../assets/images/first.png";
@@ -6,7 +6,7 @@ import thirdImg from "../../assets/images/three.png";
 import fourthImg from "../../assets/images/four.png";
 import circle from "../../assets/images/static.png";
 import copy from "../../assets/images/kopi.png";
-import success from "../../assets/images/copy-success.png"
+import success from "../../assets/images/copy-success.png";
 
 export default function StatisticsPanel() {
   const contractAddress = "Cm6acA7PHfktYMBa7DK9vKJb4pzHeSr5gYvz1idMRnaf";
@@ -14,6 +14,8 @@ export default function StatisticsPanel() {
   const [shortenedAddress, setShortenedAddress] = useState(contractAddress);
   const [currentNote, setCurrentNote] = useState(0);
   const [currentImage, setCurrentImage] = useState(copy);
+  const headerRef = useRef(null);
+  const notesRef = useRef(null);
 
   const updateAddressBasedOnScreenSize = () => {
     if (window.innerWidth <= 1024) {
@@ -40,7 +42,7 @@ export default function StatisticsPanel() {
       .then(() => {
         setCurrentImage(success);
         setTimeout(() => {
-          setCurrentImage(copy); 
+          setCurrentImage(copy);
         }, 3000);
       })
       .catch((err) => {
@@ -52,47 +54,83 @@ export default function StatisticsPanel() {
     setCurrentNote(index);
   };
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add(style.visible);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    if (headerRef.current) observer.observe(headerRef.current);
+    if (notesRef.current) observer.observe(notesRef.current);
+
+    return () => {
+      if (headerRef.current) observer.unobserve(headerRef.current);
+      if (notesRef.current) observer.unobserve(notesRef.current);
+    };
+  }, []);
+
   return (
     <div className={style.statisticsSection}>
-      <div className={style.header}>
+      <div ref={headerRef} className={`${style.header} ${style.hidden}`}>
         <span className={style.textLayer}>
           <span className={style.orange_text}>HOW</span> to buy{" "}
           <span className={style.orange_text}>$KONG?</span>
         </span>
       </div>
-      <div className={style.notes}>
+      <div ref={notesRef} className={`${style.notes} ${style.hidden}`}>
         <div className={style.notesWrapper}>
           <div
             className={`${style.note} ${style.first_note} ${
-              currentNote === 0 ? style.visible : ""
+              currentNote === 0 ? style.visibleNote : ""
             }`}
           >
             <span>1. Create a Phantom wallet</span>
-            <span className={style.desc}>Visit phantom.app and follow the simple steps to create a new account in the  app or browser extension.</span>
+            <span className={style.desc}>
+              Visit phantom.app and follow the simple steps to create a new
+              account in the app or browser extension.
+            </span>
           </div>
           <div
             className={`${style.note} ${style.second_note} ${
-              currentNote === 1 ? style.visible : ""
+              currentNote === 1 ? style.visibleNote : ""
             }`}
           >
             <span>2. Get some $SOL</span>
-            <span className={style.desc}>Tap the BUY button in the app to purchase Solana, or deposit $SOL to your Phantom wallet from the crypto exchange of your choice.</span>
+            <span className={style.desc}>
+              Tap the BUY button in the app to purchase Solana, or deposit $SOL
+              to your Phantom wallet from the crypto exchange of your choice.
+            </span>
           </div>
           <div
             className={`${style.note} ${style.third_note} ${
-              currentNote === 2 ? style.visible : ""
+              currentNote === 2 ? style.visibleNote : ""
             }`}
           >
             <span>3. Swap $SOL for $KONG</span>
-            <span className={style.desc}>Tap the SWAP icon in your Phantom wallet and paste the $KONG token address. Swap your $SOL for $KONG.</span>
+            <span className={style.desc}>
+              Tap the SWAP icon in your Phantom wallet and paste the $KONG token
+              address. Swap your $SOL for $KONG.
+            </span>
           </div>
           <div
             className={`${style.note} ${style.fourth_note} ${
-              currentNote === 3 ? style.visible : ""
+              currentNote === 3 ? style.visibleNote : ""
             }`}
           >
-            <span className={style.four_span}>4. You are now in a $KONG<br/> tribe!</span>
-            <span className={style.four_span}>CONQUER THE BANANA<br/> ZONE!</span>
+            <span className={style.four_span}>
+              4. You are now in a $KONG
+              <br /> tribe!
+            </span>
+            <span className={style.four_span}>
+              CONQUER THE BANANA
+              <br /> ZONE!
+            </span>
           </div>
         </div>
       </div>

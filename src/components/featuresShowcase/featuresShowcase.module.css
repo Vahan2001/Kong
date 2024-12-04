@@ -2,6 +2,7 @@
   width: 100%;
   position: relative;
 }
+
 .kong_img__blokes {
   display: flex;
   width: 100%;
@@ -50,7 +51,16 @@
   text-shadow: 2px 2px 0px black, -2px 2px 0px black, 2px -2px 0px black,
     -2px -2px 0px black;
 }
+.kong_dys {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
 
+.kong_dys.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 @media (max-width: 1420px) {
   .kong_text {
     font-size: 30px;

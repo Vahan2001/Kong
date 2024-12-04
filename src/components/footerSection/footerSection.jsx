@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import RunningText from "../runningText/runningText";
 import kongHeadImg from "../../assets/images/kongHead.png";
 import twitterImg from "../../assets/images/defaulttw.png";
@@ -5,14 +6,34 @@ import telegramImg from "../../assets/images/defaulttele.png";
 import style from "./footerSection.module.css";
 
 export default function FooterSection() {
+  const contentRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          contentRef.current.classList.add(style.visible);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (contentRef.current) {
+      observer.observe(contentRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div>
       <div className={style.running__text__block}>
         <RunningText />
       </div>
-      <div className={style.footer__section}>
+      <div className={`${style.footer__section}`}>
         <div className="container">
-          <div className={style.content}>
+          <div ref={contentRef} className={`${style.content} ${style.hidden}`}>
             <span>
               It's time to <span>$kong</span> it <span>$kong</span> it!
             </span>
