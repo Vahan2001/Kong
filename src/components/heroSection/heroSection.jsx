@@ -66,7 +66,6 @@ export default function HeroSection() {
               <p>MISSION TO BANANA ZONE</p>
             </div>
           </div>
-          <div className={style.text__mobile}></div>
           <div className={style.content__buttons}>
             <div className={style.twitter__btn}>
               <img src={twitterImg} alt="Twitter" />

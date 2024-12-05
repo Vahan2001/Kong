@@ -25,9 +25,7 @@
   height: 100%;
   pointer-events: none;
 }
-.text__mobile {
-  display: none;
-}
+
 .kong__head {
   width: 20%;
 }
@@ -209,12 +207,7 @@
       justify-content: space-around;
     }
   }
-  .text__back__img {
-    display: none;
-  }
-  .text__mobile {
-    display: block;
-  }
+
   .text__mobile {
     background-image: url("../../assets/images/mobileherosec.png");
     background-repeat: no-repeat;
