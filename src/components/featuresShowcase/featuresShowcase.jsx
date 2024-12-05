@@ -15,6 +15,8 @@ export default function FeaturesShowcase() {
 
         if (rect.top < windowHeight && rect.bottom > 0) {
           kongDysRef.current.classList.add(style.visible);
+        } else {
+          kongDysRef.current.classList.remove(style.visible);
         }
       }
     };

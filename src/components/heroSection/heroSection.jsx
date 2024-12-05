@@ -33,7 +33,7 @@ export default function HeroSection() {
   return (
     <div className={style.heroSection}>
       <div className={style.videoBackground}>
-        <video ref={videoRef} autoPlay muted>
+        <video ref={videoRef} autoPlay muted playsInline>
           <source src={animationKong} type="video/mp4" />
         </video>
       </div>

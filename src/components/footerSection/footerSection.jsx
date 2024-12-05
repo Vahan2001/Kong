@@ -13,7 +13,8 @@ export default function FooterSection() {
       ([entry]) => {
         if (entry.isIntersecting) {
           contentRef.current.classList.add(style.visible);
-          observer.disconnect();
+        } else {
+          contentRef.current.classList.remove(style.visible);
         }
       },
       { threshold: 0.1 }

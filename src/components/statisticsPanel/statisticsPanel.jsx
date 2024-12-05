@@ -14,6 +14,7 @@ export default function StatisticsPanel() {
   const [shortenedAddress, setShortenedAddress] = useState(contractAddress);
   const [currentNote, setCurrentNote] = useState(0);
   const [currentImage, setCurrentImage] = useState(copy);
+
   const headerRef = useRef(null);
   const notesRef = useRef(null);
   const footerRef = useRef(null);
@@ -51,32 +52,31 @@ export default function StatisticsPanel() {
       });
   };
 
-  const handleDotClick = (index) => {
-    setCurrentNote(index);
-  };
-
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add(style.visible);
+          } else {
+            entry.target.classList.remove(style.visible);
           }
         });
       },
       { threshold: 0.2 }
     );
 
-    if (headerRef.current) observer.observe(headerRef.current);
-    if (notesRef.current) observer.observe(notesRef.current);
-    if (footerRef.current) observer.observe(footerRef.current);
+    const elements = [headerRef.current, notesRef.current, footerRef.current];
+    elements.forEach((el) => el && observer.observe(el));
 
     return () => {
-      if (headerRef.current) observer.unobserve(headerRef.current);
-      if (notesRef.current) observer.unobserve(notesRef.current);
-      if (footerRef.current) observer.unobserve(footerRef.current);
+      elements.forEach((el) => el && observer.unobserve(el));
     };
   }, []);
+
+  const handleDotClick = (index) => {
+    setCurrentNote(index);
+  };
 
   return (
     <div className={style.statisticsSection}>
