@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import Lottie from "react-lottie"; 
+import Lottie from "react-lottie";
 import style from "./featuresShowcase.module.css";
 import firstkongAnimation from "../../assets/animations/1.json";
 import secondkongAnimation from "../../assets/animations/2.json";
@@ -30,8 +30,8 @@ export default function FeaturesShowcase() {
   }, []);
 
   const lottieOptions = {
-    loop: true, 
-    autoplay: true, 
+    loop: true,
+    autoplay: true,
     animationData: firstkongAnimation,
     rendererSettings: {
       preserveAspectRatio: "xMidYMid slice",
@@ -39,20 +39,20 @@ export default function FeaturesShowcase() {
   };
 
   const lottieOptions2 = {
-    loop: true, 
+    loop: true,
     autoplay: true,
     animationData: secondkongAnimation,
     rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice", 
+      preserveAspectRatio: "xMidYMid slice",
     },
   };
 
   const lottieOptions3 = {
-    loop: true, 
+    loop: true,
     autoplay: true,
-    animationData: thirdkongAnimation, 
+    animationData: thirdkongAnimation,
     rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice", 
+      preserveAspectRatio: "xMidYMid slice",
     },
   };
 
@@ -67,7 +67,7 @@ export default function FeaturesShowcase() {
         <div
           className={`${style["kong-section-item"]} ${style["kong-section-center"]}`}
         >
-          <Lottie options={lottieOptions2}/>
+          <Lottie options={lottieOptions2} />
         </div>
         <div
           className={`${style["kong-section-item"]} ${style["kong-section-right"]}`}

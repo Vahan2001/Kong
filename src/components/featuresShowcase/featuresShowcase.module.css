@@ -9,6 +9,7 @@
 }
 .kong-section-item {
   height: 100%;
+  width: 33.3%;
   & img {
     display: block;
     width: 100%;

@@ -1,5 +1,5 @@
 .footer__section {
-  background-image: url("../../assets/images/footersectionImg.png");
+  background-image: url("../../assets/images/footersectionImg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
@@ -157,7 +157,7 @@ footer {
 
 @media (max-width: 1024px) {
   .footer__section {
-    background-image: url("../../assets/images/footerbackImg2.png");
+    background-image: url("../../assets/images/footerbackImg.jpg");
     background-size: 100% 100%;
   }
 }
