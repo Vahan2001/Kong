@@ -7,10 +7,10 @@ export default function Screens() {
   return (
     <div>
       <HeroSection />
-      <CityOverview />
+      {/* <CityOverview />
       <FeaturesShowcase />
       <StatisticsPanel />
-      <FooterSection />
+      <FooterSection /> */}
     </div>
   );
 }

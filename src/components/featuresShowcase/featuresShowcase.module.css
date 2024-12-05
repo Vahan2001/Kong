@@ -15,7 +15,10 @@
     width: 100%;
   }
 }
-
+.kong-section-right {
+  background-image: url("../../assets/images/degen-vs-kong2-3.jpg");
+  background-repeat: no-repeat;
+}
 .kong_dys {
   position: absolute;
   bottom: 100px;
