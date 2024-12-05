@@ -19,6 +19,9 @@ export default function StatisticsPanel() {
   const notesRef = useRef(null);
   const footerRef = useRef(null);
 
+  const [touchStart, setTouchStart] = useState(0); 
+  const [touchEnd, setTouchEnd] = useState(0); 
+
   const updateAddressBasedOnScreenSize = () => {
     if (window.innerWidth <= 1024) {
       setShortenedAddress(
@@ -48,8 +51,30 @@ export default function StatisticsPanel() {
         }, 3000);
       })
       .catch((err) => {
-        console.error("dont copy", err);
+        console.error("Ошибка копирования", err);
       });
+  };
+
+  const handleDotClick = (index) => {
+    setCurrentNote(index);
+  };
+
+  const handleTouchStart = (e) => {
+    const touchStart = e.touches[0].clientX; 
+    setTouchStart(touchStart);
+  };
+
+  const handleTouchEnd = (e) => {
+    const touchEnd = e.changedTouches[0].clientX; 
+    setTouchEnd(touchEnd);
+
+    if (touchStart - touchEnd > 50) {
+      setCurrentNote((prev) => Math.min(prev + 1, 3)); 
+    }
+
+    if (touchEnd - touchStart > 50) {
+      setCurrentNote((prev) => Math.max(prev - 1, 0));
+    }
   };
 
   useEffect(() => {
@@ -84,12 +109,12 @@ export default function StatisticsPanel() {
     };
   }, []);
 
-  const handleDotClick = (index) => {
-    setCurrentNote(index);
-  };
-
   return (
-    <div className={style.statisticsSection}>
+    <div
+      className={style.statisticsSection}
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}   
+    >
       <div ref={headerRef} className={`${style.header} ${style.hidden}`}>
         <span className={style.textLayer}>
           <span className={style.orange_text}>HOW</span> to buy{" "}

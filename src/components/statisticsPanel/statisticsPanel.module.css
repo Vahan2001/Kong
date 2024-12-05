@@ -293,8 +293,6 @@
   .dots {
     position: relative;
     bottom: 120px;
-    left: 19%;
-    transform: translateX(-50%);
     display: flex;
     justify-content: center;
     gap: 40px;
@@ -307,7 +305,6 @@
     left: 0;
     right: 0;
     border-top: 1px dashed grey;
-    z-index: -1;
   }
 
   .dot {
@@ -345,9 +342,6 @@
   }
   .statics {
     width: 360px;
-  }
-  .dots {
-    left: 50%;
   }
 
   .footer_head {
