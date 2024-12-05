@@ -10,11 +10,9 @@ export default function CityOverview() {
         const rect = contentRef.current.getBoundingClientRect();
         const windowHeight = window.innerHeight;
 
-        // Проверяем, находится ли элемент в зоне видимости
         if (rect.top < windowHeight && rect.bottom > 0) {
           contentRef.current.classList.add(style.visible);
         } else {
-          // Убираем класс, если элемент выходит из видимости
           contentRef.current.classList.remove(style.visible);
         }
       }

@@ -63,11 +63,21 @@ export default function StatisticsPanel() {
           }
         });
       },
-      { threshold: 0.2 }
+      { threshold: 0.1 }
     );
 
     const elements = [headerRef.current, notesRef.current, footerRef.current];
     elements.forEach((el) => el && observer.observe(el));
+
+    if (window.innerWidth > 1024) {
+      elements.forEach((el, index) => {
+        if (el) {
+          setTimeout(() => {
+            el.classList.add(style.visible);
+          }, index * 300);
+        }
+      });
+    }
 
     return () => {
       elements.forEach((el) => el && observer.unobserve(el));
@@ -95,7 +105,7 @@ export default function StatisticsPanel() {
           >
             <span>1. Create a Phantom wallet</span>
             <span className={style.desc}>
-              Visit phantom.app and follow the simple steps to create a new
+              Visit phantom.app and follow the simple steps to create a new
               account in the app or browser extension.
             </span>
           </div>
@@ -106,7 +116,7 @@ export default function StatisticsPanel() {
           >
             <span>2. Get some $SOL</span>
             <span className={style.desc}>
-              Tap the BUY button in the app to purchase Solana, or deposit $SOL
+              Tap the BUY button in the app to purchase Solana, or deposit $SOL
               to your Phantom wallet from the crypto exchange of your choice.
             </span>
           </div>
@@ -117,7 +127,7 @@ export default function StatisticsPanel() {
           >
             <span>3. Swap $SOL for $KONG</span>
             <span className={style.desc}>
-              Tap the SWAP icon in your Phantom wallet and paste the $KONG token
+              Tap the SWAP icon in your Phantom wallet and paste the $KONG token
               address. Swap your $SOL for $KONG.
             </span>
           </div>

@@ -7,22 +7,24 @@ import style from "./footerSection.module.css";
 
 export default function FooterSection() {
   const contentRef = useRef(null);
+  const mediaBlockRef = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           contentRef.current.classList.add(style.visible);
+          mediaBlockRef.current.classList.add(style.visible);
         } else {
           contentRef.current.classList.remove(style.visible);
+          mediaBlockRef.current.classList.remove(style.visible);
         }
       },
       { threshold: 0.1 }
     );
 
-    if (contentRef.current) {
-      observer.observe(contentRef.current);
-    }
+    if (contentRef.current) observer.observe(contentRef.current);
+    if (mediaBlockRef.current) observer.observe(mediaBlockRef.current);
 
     return () => observer.disconnect();
   }, []);
@@ -39,7 +41,10 @@ export default function FooterSection() {
               It's time to <span>$kong</span> it <span>$kong</span> it!
             </span>
           </div>
-          <div className={style.media__block}></div>
+          <div
+            ref={mediaBlockRef}
+            className={`${style.media__block} ${style.hidden}`}
+          ></div>
         </div>
       </div>
       <footer>

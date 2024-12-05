@@ -1,10 +1,10 @@
+import { useEffect, useRef } from "react";
 import RunningText from "../runningText/runningText";
 import kongHeadImg from "../../assets/images/kongHead.png";
 import twitterImg from "../../assets/images/twitter.png";
 import telegramImg from "../../assets/images/telegram.png";
 import animationKong from "../../assets/videos/Kong_Rin2.mp4";
 import style from "./heroSection.module.css";
-import { useEffect, useRef } from "react";
 
 export default function HeroSection() {
   const videoRef = useRef(null);
@@ -16,6 +16,10 @@ export default function HeroSection() {
         document
           .querySelector(`.${style.text__back__img}`)
           .classList.add(style.visible);
+
+        document
+          .querySelector(`.${style.text__mobile}`)
+          .classList.add(style.visible);
       });
     }
 
@@ -24,6 +28,9 @@ export default function HeroSection() {
         videoElement.removeEventListener("ended", () => {
           document
             .querySelector(`.${style.text__back__img}`)
+            .classList.add(style.visible);
+          document
+            .querySelector(`.${style.text__mobile}`)
             .classList.add(style.visible);
         });
       }
@@ -66,6 +73,7 @@ export default function HeroSection() {
               <p>MISSION TO BANANA ZONE</p>
             </div>
           </div>
+          <div className={style.text__mobile}></div>
           <div className={style.content__buttons}>
             <div className={style.twitter__btn}>
               <img src={twitterImg} alt="Twitter" />
