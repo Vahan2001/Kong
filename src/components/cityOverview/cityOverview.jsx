@@ -1,5 +1,7 @@
 import { useEffect, useRef } from "react";
+import kongAnimation from "../../assets/animations/Kong_Central.json"
 import style from "./cityOverview.module.css";
+import Lottie from "react-lottie";
 
 export default function CityOverview() {
   const contentRef = useRef(null);
@@ -25,10 +27,22 @@ export default function CityOverview() {
     };
   }, []);
 
+  const lottieOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: kongAnimation,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
+
   return (
     <div className={style.heroSection}>
       <div className="container">
         <div className={style.content__center}>
+          <div className={style.animated_div}>
+             <Lottie options={lottieOptions}/>
+          </div>
           <div className={style.content} ref={contentRef}>
             <span className={style.textLayer}>
               <span className={style.orange_text}>BANANA ZONE</span> is waiting

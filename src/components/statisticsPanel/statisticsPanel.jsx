@@ -7,6 +7,8 @@ import fourthImg from "../../assets/images/four.png";
 import circle from "../../assets/images/static.png";
 import copy from "../../assets/images/kopi.png";
 import success from "../../assets/images/copy-success.png";
+import kongAnimation from "../../assets/animations/HOW_TO_KONG2.json"
+import Lottie from "react-lottie";
 
 export default function StatisticsPanel() {
   const contractAddress = "Cm6acA7PHfktYMBa7DK9vKJb4pzHeSr5gYvz1idMRnaf";
@@ -109,6 +111,15 @@ export default function StatisticsPanel() {
     };
   }, []);
 
+  const lottieOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: kongAnimation,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
+
   return (
     <div
       className={style.statisticsSection}
@@ -172,7 +183,6 @@ export default function StatisticsPanel() {
           </div>
         </div>
       </div>
-
       <div className={style.dots}>
         {[firstImg, secondImg, thirdImg, fourthImg].map((_, index) => (
           <div
@@ -184,7 +194,9 @@ export default function StatisticsPanel() {
           />
         ))}
       </div>
-
+     <div className={style.animated_div}>
+       <Lottie options={lottieOptions}/>
+     </div>
       <div ref={footerRef} className={`${style.footer} ${style.hidden}`}>
         <div className={style.circle}>
           <img src={circle} />

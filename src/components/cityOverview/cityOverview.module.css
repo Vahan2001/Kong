@@ -10,6 +10,8 @@
 }
 .content__center {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
 }
 .content {
@@ -51,6 +53,11 @@
   text-shadow: 2px 2px 0px black, -2px 2px 0px black, 2px -2px 0px black,
     -2px -2px 0px black;
 }
+.animated_div{
+  width: 1000px;
+  height: 1000px;
+  margin-bottom: -150px;
+}
 @media (max-width: 910px) {
   .content {
     width: 560px;
@@ -61,7 +68,11 @@
   .heroSection {
     height: 812px;
   }
-
+  .animated_div{
+    width: 600px;
+    height: 600px;
+    margin-bottom: -150px;
+  }
   .content {
     width: 343px;
     height: 176px;
@@ -82,6 +93,11 @@
     height: 812px;
   }
 
+  .animated_div{
+    width: 350px;
+    height: 550px;
+    margin-bottom: -150px;
+  }
   .content {
     width: 190px;
     margin-bottom: 0px;
