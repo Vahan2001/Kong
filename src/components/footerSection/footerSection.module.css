@@ -43,6 +43,12 @@
 .media__block {
   display: none;
 }
+.footer__video {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
 footer {
   background-color: #fcd973;
   & .footer__flex {
@@ -155,10 +161,26 @@ footer {
   font-family: Jingleberry;
 }
 
+@media (max-width: 1420px) {
+  .footer__video {
+    justify-content: end;
+    width: 300px;
+    & video {
+      width: 100%;
+    }
+  }
+}
+
 @media (max-width: 1024px) {
   .footer__section {
     background-image: url("../../assets/images/footerbackImg.jpg");
     background-size: 100% 100%;
+  }
+  .footer__video {
+    width: 300px;
+    & video {
+      width: 100%;
+    }
   }
 }
 

@@ -3,6 +3,7 @@ import RunningText from "../runningText/runningText";
 import kongHeadImg from "../../assets/images/kongHead.png";
 import twitterImg from "../../assets/images/defaulttw.png";
 import telegramImg from "../../assets/images/defaulttele.png";
+import rocketBanana from "../../assets/videos/Fire rocket-vp9-chrome.webm";
 import style from "./footerSection.module.css";
 
 export default function FooterSection() {
@@ -45,6 +46,11 @@ export default function FooterSection() {
             ref={mediaBlockRef}
             className={`${style.media__block} ${style.hidden}`}
           ></div>
+          <div className={style.footer__video}>
+            <video autoPlay loop muted>
+              <source src={rocketBanana} type="video/mp4" />
+            </video>
+          </div>
         </div>
       </div>
       <footer>

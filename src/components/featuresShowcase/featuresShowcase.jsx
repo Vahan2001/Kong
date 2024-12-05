@@ -4,6 +4,7 @@ import style from "./featuresShowcase.module.css";
 import firstkongAnimation from "../../assets/animations/1.json";
 import secondkongAnimation from "../../assets/animations/2.json";
 import thirdkongAnimation from "../../assets/animations/3.json";
+import RunningText from "../runningText/runningText";
 
 export default function FeaturesShowcase() {
   const kongDysRef = useRef(null);
@@ -62,17 +63,17 @@ export default function FeaturesShowcase() {
         <div
           className={`${style["kong-section-item"]} ${style["kong-section-left"]}`}
         >
-          <Lottie options={lottieOptions} />
+          {/* <Lottie options={lottieOptions} /> */}
         </div>
         <div
           className={`${style["kong-section-item"]} ${style["kong-section-center"]}`}
         >
-          <Lottie options={lottieOptions2} />
+          {/* <Lottie options={lottieOptions2} /> */}
         </div>
         <div
           className={`${style["kong-section-item"]} ${style["kong-section-right"]}`}
         >
-          <Lottie options={lottieOptions3} />
+          {/* <Lottie options={lottieOptions3} /> */}
         </div>
       </div>
       <div className="container">
@@ -87,6 +88,9 @@ export default function FeaturesShowcase() {
             </p>
           </div>
         </div>
+      </div>
+      <div className={style.running__text}>
+        <RunningText />
       </div>
     </div>
   );

@@ -18,7 +18,7 @@
 
 .kong_dys {
   position: absolute;
-  bottom: 35px;
+  bottom: 100px;
   right: 65px;
 }
 
@@ -52,13 +52,17 @@
 }
 .kong_dys {
   opacity: 0;
-  transform: translateY(50px);
+  transform: translateY(100px);
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
 .kong_dys.visible {
   opacity: 1;
   transform: translateY(0);
+}
+.running__text {
+  position: absolute;
+  bottom: 0;
 }
 @media (max-width: 1420px) {
   .kong_text {

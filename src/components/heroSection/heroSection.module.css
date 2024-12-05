@@ -150,6 +150,9 @@
 }
 
 @media (max-width: 1024px) {
+  .videoBackground video {
+    object-position: center;
+  }
   .kong__head {
     width: 15%;
     text-align: center;
@@ -176,6 +179,9 @@
 }
 
 @media (max-width: 850px) {
+  .videoBackground video {
+    object-position: top;
+  }
   .heroSection {
     & .content {
       justify-content: center;
@@ -224,6 +230,9 @@
   }
 }
 @media (max-width: 420px) {
+  .videoBackground video {
+    object-position: center;
+  }
   .text__mobile {
     background-image: url("../../assets/images/mobileherosec.png");
     background-repeat: no-repeat;
