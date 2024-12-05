@@ -118,7 +118,7 @@
 .content__buttons {
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: center;
   gap: 10px;
   width: 20%;
 }

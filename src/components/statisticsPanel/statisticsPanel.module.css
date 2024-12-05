@@ -72,7 +72,7 @@
   }
 }
 
-.animated_div{
+.animated_div {
   width: 350px;
   height: 500px;
   position: absolute;
@@ -191,6 +191,33 @@
     opacity: 0.8;
   }
 }
+@media (max-width: 2560px) {
+  .animated_div {
+    left: 59%;
+    margin-top: -8%;
+  }
+}
+
+@media (max-width: 2100px) {
+  .animated_div {
+    left: 59%;
+    margin-top: -17%;
+  }
+}
+
+@media (max-width: 1920px) {
+  .animated_div {
+    left: 59%;
+    margin-top: -19%;
+  }
+}
+
+@media (max-width: 1620px) {
+  .animated_div {
+    left: 57%;
+    margin-top: -31%;
+  }
+}
 
 @media (max-width: 1440px) {
   .statisticsSection {
@@ -209,7 +236,7 @@
     width: 780px;
   }
 
-  .animated_div{
+  .animated_div {
     width: 350px;
     height: 500px;
     position: absolute;
@@ -222,7 +249,7 @@
   .statisticsSection {
     height: 1850px;
   }
-  .animated_div{
+  .animated_div {
     width: 350px;
     height: 500px;
     position: absolute;
@@ -232,7 +259,7 @@
 }
 
 @media (max-width: 1024px) {
-  .animated_div{
+  .animated_div {
     width: 350px;
     height: 500px;
     position: absolute;
@@ -283,7 +310,7 @@
 }
 
 @media (max-width: 768px) {
-  .animated_div{
+  .animated_div {
     width: 350px;
     height: 500px;
     position: absolute;
@@ -367,7 +394,7 @@
 }
 
 @media (max-width: 650px) {
-  .animated_div{
+  .animated_div {
     width: 350px;
     height: 500px;
     position: absolute;
@@ -377,14 +404,14 @@
 }
 
 @media (max-width: 480px) {
-  .animated_div{
+  .animated_div {
     width: 350px;
     height: 500px;
     position: absolute;
     left: 10%;
     margin-top: 30%;
   }
-  
+
   .footer {
     flex-direction: column;
     align-items: center;
