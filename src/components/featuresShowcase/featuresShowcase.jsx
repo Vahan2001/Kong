@@ -1,8 +1,9 @@
 import { useEffect, useRef } from "react";
+import Lottie from "react-lottie"; 
 import style from "./featuresShowcase.module.css";
-import kongHeadImg1 from "../../assets/images/degenKong1.jpg";
-import kongHeadImg2 from "../../assets/images/degenKong2.jpg";
-import kongHeadImg3 from "../../assets/images/degenKong3.jpg";
+import firstkongAnimation from "../../assets/animations/1.json";
+import secondkongAnimation from "../../assets/animations/2.json";
+import thirdkongAnimation from "../../assets/animations/3.json";
 
 export default function FeaturesShowcase() {
   const kongDysRef = useRef(null);
@@ -28,23 +29,50 @@ export default function FeaturesShowcase() {
     };
   }, []);
 
+  const lottieOptions = {
+    loop: true, 
+    autoplay: true, 
+    animationData: firstkongAnimation,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
+
+  const lottieOptions2 = {
+    loop: true, 
+    autoplay: true,
+    animationData: secondkongAnimation,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice", 
+    },
+  };
+
+  const lottieOptions3 = {
+    loop: true, 
+    autoplay: true,
+    animationData: thirdkongAnimation, 
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice", 
+    },
+  };
+
   return (
     <div className={style.kong_section}>
       <div className={style.kong_img__blokes}>
         <div
           className={`${style["kong-section-item"]} ${style["kong-section-left"]}`}
         >
-          <img src={kongHeadImg1} alt="KongHead" />
+          <Lottie options={lottieOptions} />
         </div>
         <div
           className={`${style["kong-section-item"]} ${style["kong-section-center"]}`}
         >
-          <img src={kongHeadImg2} alt="KongHead" />
+          <Lottie options={lottieOptions2}/>
         </div>
         <div
           className={`${style["kong-section-item"]} ${style["kong-section-right"]}`}
         >
-          <img src={kongHeadImg3} alt="KongHead" />
+          <Lottie options={lottieOptions3} />
         </div>
       </div>
       <div className="container">
@@ -52,7 +80,7 @@ export default function FeaturesShowcase() {
           <div className={style.kong_banner}>
             <p className={style.kong_text}>
               <span className={style.text_layer}>BANANA ZONE</span>
-              is is also a place <br />
+              is also a place <br />
               where the unexpected happens.
               <br />
               <span className={style.text_layer}>KONG FEELS IT</span>
