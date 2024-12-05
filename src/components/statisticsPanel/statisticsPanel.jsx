@@ -90,7 +90,7 @@ export default function StatisticsPanel() {
         <div className={style.notesWrapper}>
           <div
             className={`${style.note} ${style.first_note} ${
-              currentNote === 0 ? style.visibleNote : ""
+              currentNote === 0 ? style.visible : ""
             }`}
           >
             <span>1. Create a Phantom wallet</span>
@@ -101,7 +101,7 @@ export default function StatisticsPanel() {
           </div>
           <div
             className={`${style.note} ${style.second_note} ${
-              currentNote === 1 ? style.visibleNote : ""
+              currentNote === 1 ? style.visible : ""
             }`}
           >
             <span>2. Get some $SOL</span>
@@ -112,7 +112,7 @@ export default function StatisticsPanel() {
           </div>
           <div
             className={`${style.note} ${style.third_note} ${
-              currentNote === 2 ? style.visibleNote : ""
+              currentNote === 2 ? style.visible : ""
             }`}
           >
             <span>3. Swap $SOL for $KONG</span>
@@ -123,7 +123,7 @@ export default function StatisticsPanel() {
           </div>
           <div
             className={`${style.note} ${style.fourth_note} ${
-              currentNote === 3 ? style.visibleNote : ""
+              currentNote === 3 ? style.visible : ""
             }`}
           >
             <span className={style.four_span}>
