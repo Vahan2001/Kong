@@ -3,7 +3,7 @@ import RunningText from "../runningText/runningText";
 import kongHeadImg from "../../assets/images/footerheadtext.svg";
 import twitterImg from "../../assets/images/defaulttw.png";
 import telegramImg from "../../assets/images/defaulttele.png";
-import rocketBanana from "../../assets/videos/Fire rocket-vp9-chrome.webm";
+import rocketBanana from "../../assets/videos/Fire_rocket.webm";
 import text from "../../assets/images/footerText.svg";
 
 import style from "./footerSection.module.css";
