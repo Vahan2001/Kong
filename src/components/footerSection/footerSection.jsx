@@ -47,17 +47,15 @@ export default function FooterSection() {
           </div>
 
           <div className={style.footer__video}>
-            <video autoPlay loop muted playsInline>
-              {/* <source
-                src={isIOS ? rocketBananaMp4 : rocketBanana}
-                type={isIOS ? "video/mp4" : "video/webm"}
-              /> */}
-              <source src={rocketBanana} type={"video/webm"} />
-            </video>
-            <video autoPlay loop muted playsInline>
-              <source src={rocketBananaMp4} type={"video/mp4"} />
-            </video>
-            <p>{isIOS}</p>
+            {isIOS ? (
+              <video autoPlay loop muted playsInline>
+                <source src={rocketBananaMp4} type={"video/mp4"} />
+              </video>
+            ) : (
+              <video autoPlay loop muted playsInline>
+                <source src={rocketBanana} type={"video/webm"} />
+              </video>
+            )}
           </div>
         </div>
       </div>
