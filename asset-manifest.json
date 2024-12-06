@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Kong/static/css/main.2c93c727.css",
-    "main.js": "/Kong/static/js/main.118eb840.js",
+    "main.css": "/Kong/static/css/main.4862927c.css",
+    "main.js": "/Kong/static/js/main.d0457442.js",
     "static/js/453.666af1d9.chunk.js": "/Kong/static/js/453.666af1d9.chunk.js",
     "static/media/Fire_rockethevc-safari.mp4": "/Kong/static/media/Fire_rockethevc-safari.5334caaff0a8fd89b2c8.mp4",
     "static/media/Kong_Rin2.mp4": "/Kong/static/media/Kong_Rin2.fba6f885ae59e661929c.mp4",
@@ -42,12 +42,12 @@
     "static/media/second.png": "/Kong/static/media/second.da82a3e4feb5c8a78db6.png",
     "static/media/first.png": "/Kong/static/media/first.175fcd57e2ba83abdc99.png",
     "index.html": "/Kong/index.html",
-    "main.2c93c727.css.map": "/Kong/static/css/main.2c93c727.css.map",
-    "main.118eb840.js.map": "/Kong/static/js/main.118eb840.js.map",
+    "main.4862927c.css.map": "/Kong/static/css/main.4862927c.css.map",
+    "main.d0457442.js.map": "/Kong/static/js/main.d0457442.js.map",
     "453.666af1d9.chunk.js.map": "/Kong/static/js/453.666af1d9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2c93c727.css",
-    "static/js/main.118eb840.js"
+    "static/css/main.4862927c.css",
+    "static/js/main.d0457442.js"
   ]
 }
