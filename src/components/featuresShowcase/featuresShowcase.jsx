@@ -1,13 +1,30 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Lottie from "react-lottie";
 import style from "./featuresShowcase.module.css";
 import firstkongAnimation from "../../assets/animations/1.json";
 import secondkongAnimation from "../../assets/animations/2.json";
 import thirdkongAnimation from "../../assets/animations/3.json";
 import RunningText from "../runningText/runningText";
+import dAnimation from "../../assets/images/3d.svg";
+import mobileAnimation from "../../assets/images/3mobile.svg";
 
 export default function FeaturesShowcase() {
   const kongDysRef = useRef(null);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  const updateWindowWidth = () => {
+    setWindowWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    window.addEventListener('resize', updateWindowWidth);
+    return () => {
+      window.removeEventListener('resize', updateWindowWidth);
+    };
+  }, []);
+
+  // Rename the variable to avoid conflicts with the imported dAnimation
+  const currentAnimation = windowWidth <= 986 ? mobileAnimation : dAnimation;
 
   useEffect(() => {
     const onScroll = () => {
@@ -78,14 +95,8 @@ export default function FeaturesShowcase() {
       </div>
       <div className="container">
         <div className={style.kong_dys} ref={kongDysRef}>
-          <div className={style.kong_banner}>
-            <p className={style.kong_text}>
-              <span className={style.text_layer}>BANANA ZONE</span>
-              is also a place <br />
-              where the unexpected happens.
-              <br />
-              <span className={style.text_layer}>KONG FEELS IT</span>
-            </p>
+          <div className={style.animation}>
+            <img src={currentAnimation} alt="Kong Banner" className={style.animImg} />
           </div>
         </div>
       </div>

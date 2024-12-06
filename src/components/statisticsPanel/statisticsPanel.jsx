@@ -53,7 +53,7 @@ export default function StatisticsPanel() {
         }, 3000);
       })
       .catch((err) => {
-        console.error("Ошибка копирования", err);
+        console.error("Error", err);
       });
   };
 
@@ -127,10 +127,6 @@ export default function StatisticsPanel() {
       onTouchEnd={handleTouchEnd}   
     >
       <div ref={headerRef} className={`${style.header} ${style.hidden}`}>
-        <span className={style.textLayer}>
-          <span className={style.orange_text}>HOW</span> to buy{" "}
-          <span className={style.orange_text}>$KONG?</span>
-        </span>
       </div>
       <div ref={notesRef} className={`${style.notes} ${style.hidden}`}>
         <div className={style.notesWrapper}>
@@ -194,9 +190,9 @@ export default function StatisticsPanel() {
           />
         ))}
       </div>
-     <div className={style.animated_div}>
+     {/* <div className={style.animated_div}>
        <Lottie options={lottieOptions}/>
-     </div>
+     </div> */}
       <div ref={footerRef} className={`${style.footer} ${style.hidden}`}>
         <div className={style.circle}>
           <img src={circle} />
