@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import RunningText from "../runningText/runningText";
 import kongHeadImg from "../../assets/images/footerheadtext.svg";
 import twitterImg from "../../assets/images/defaulttw.png";
@@ -12,8 +12,12 @@ import style from "./footerSection.module.css";
 export default function FooterSection() {
   const contentRef = useRef(null);
   const mediaBlockRef = useRef(null);
+  const [isIOS, setIsIOS] = useState(false);
 
   useEffect(() => {
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    setIsIOS(/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream);
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -43,7 +47,10 @@ export default function FooterSection() {
 
           <div className={style.footer__video}>
             <video autoPlay loop muted playsInline>
-              <source src={rocketBananaMp4} type="video/mp4" />
+              <source
+                src={isIOS ? rocketBananaMp4 : rocketBanana}
+                type={isIOS ? "video/mp4" : "video/webm"}
+              />
             </video>
           </div>
         </div>
