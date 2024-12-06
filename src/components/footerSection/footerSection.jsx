@@ -4,6 +4,8 @@ import kongHeadImg from "../../assets/images/kongHead.png";
 import twitterImg from "../../assets/images/defaulttw.png";
 import telegramImg from "../../assets/images/defaulttele.png";
 import rocketBanana from "../../assets/videos/Fire rocket-vp9-chrome.webm";
+import text from "../../assets/images/footerText.svg";
+
 import style from "./footerSection.module.css";
 
 export default function FooterSection() {
@@ -15,20 +17,17 @@ export default function FooterSection() {
       ([entry]) => {
         if (entry.isIntersecting) {
           contentRef.current.classList.add(style.visible);
-          mediaBlockRef.current.classList.add(style.visible);
         } else {
           contentRef.current.classList.remove(style.visible);
-          mediaBlockRef.current.classList.remove(style.visible);
         }
       },
       { threshold: 0.1 }
     );
 
     if (contentRef.current) observer.observe(contentRef.current);
-    if (mediaBlockRef.current) observer.observe(mediaBlockRef.current);
 
     return () => observer.disconnect();
-  }, []);
+  }, [contentRef, mediaBlockRef]);
 
   return (
     <div>
@@ -38,14 +37,9 @@ export default function FooterSection() {
       <div className={`${style.footer__section}`}>
         <div className="container">
           <div ref={contentRef} className={`${style.content} ${style.hidden}`}>
-            <span>
-              It's time to <span>$kong</span> it <span>$kong</span> it!
-            </span>
+            <img src={text} alt="Footer Text" />
           </div>
-          <div
-            ref={mediaBlockRef}
-            className={`${style.media__block} ${style.hidden}`}
-          ></div>
+
           <div className={style.footer__video}>
             <video autoPlay loop muted>
               <source src={rocketBanana} type="video/mp4" />
@@ -53,7 +47,7 @@ export default function FooterSection() {
           </div>
         </div>
       </div>
-      <footer>
+      {/* <footer>
         <div className="container">
           <div className={style.footer__flex}>
             <div className={style.head__and__text}>
@@ -92,7 +86,7 @@ export default function FooterSection() {
             <span>© KONG 2024 - All rights reserved</span>
           </div>
         </div>
-      </footer>
+      </footer> */}
     </div>
   );
 }
