@@ -15,37 +15,6 @@ code {
     monospace;
 }
 .container {
-  width: 1440px;
+  width: 100%;
   margin: 0 auto;
-}
-
-@media (max-width: 1440px) {
-  .container {
-    width: 1200px;
-  }
-}
-
-@media (max-width: 1200px) {
-  .container {
-    width: 1024px;
-  }
-}
-
-@media (max-width: 1024px) {
-  .container {
-    width: 90%;
-  }
-}
-
-@media (max-width: 768px) {
-  .container {
-    width: 80%;
-    padding: 0 15px;
-  }
-}
-
-@media (max-width: 480px) {
-  .container {
-    padding: 0 10px;
-  }
 }

@@ -1,17 +1,22 @@
 .heroSection {
-  background-image: url("../../assets/images/Kong_Central.png");
+  background-image: url("../../assets/images/Kong_Central.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
   background-repeat: no-repeat;
-  height: 907px;
+  height: 1440px;
   display: flex;
   align-items: flex-end;
   justify-content: center;
 }
-
+.content__center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 .content {
-  background-image: url("../../assets/images/backGround.jpg");
-  width: 775px;
+  background-image: url("../../assets/images/sec_pict.svg");
+  width: 980px;
   height: 207px;
   background-size: cover;
   background-position: center;
@@ -24,62 +29,53 @@
   justify-content: center;
   text-align: center;
   line-height: 70px;
-  border: 3px solid white;
 }
+.content {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.content.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .textLayer {
   font-size: 39px;
   font-family: "Jingleberry";
   position: relative;
-  padding: 5px; 
+  padding: 5px;
 }
-.orange_text{
-  color: #FFB032;
-  text-shadow: 
-    2px 2px 0px black, 
-    -2px 2px 0px black, 
-    2px -2px 0px black,  
+.orange_text {
+  color: #ffb032;
+  text-shadow: 2px 2px 0px black, -2px 2px 0px black, 2px -2px 0px black,
     -2px -2px 0px black;
 }
-
-
-@media (max-width: 780px) {
-
-  .heroSection{
-    height: 812px;
-  }
-
-  .content{
+.animated_div {
+  width: 70%;
+  height: 1100px;
+  margin-bottom: -150px;
+}
+@media (max-width: 1439px) {
+  .content {
     width: 343px;
-    height: 176px;
-    margin-bottom: 10px;
-    background-size: cover;
-    line-height: 40px;
+    height: 158px;
+    background-image: url("../../assets/images/sec_mob.svg");
+    background-position: center;
+    background-size: contain;
   }
-  .textLayer {
-    font-size: 30px;
-    font-family: "Jingleberry";
-    position: relative;
-    padding: 5px; 
+  .animated_div {
+    width: 100%;
+  }
+  .heroSection {
+    background-position: 60%;
   }
 }
 
 @media (max-width: 480px) {
-  .heroSection{
-    height: 812px;
-  }
-
-  .content{
-    width: 343px;
-    margin-bottom: 0px;
-    margin: 20px;
-    background-size: cover;
-    line-height: 30px;
-  }
-
-  .textLayer {
-    font-size: 26px;
-    font-family: "Jingleberry";
-    position: relative;
-    padding: 5px; 
+  .content {
+    width: 301px;
+    height: 135px;
   }
 }

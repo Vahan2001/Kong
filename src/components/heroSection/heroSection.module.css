@@ -1,175 +1,116 @@
 .heroSection {
-  background-image: url("../../assets/images/Asset.png");
-  background-size: cover;
-  background-position: center;
   position: relative;
-  height: 1200px;
+  height: 1220px;
+  overflow: hidden;
   & .content {
     padding-top: 30px;
     display: flex;
     align-items: start;
-    justify-content: space-around;
+    justify-content: space-between;
+    margin: 0 20px;
   }
+}
+.videoBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+.videoBackground video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.text__mobile {
+  display: none;
 }
 .kong__head {
   width: 20%;
 }
 .text__back__img {
-  background-image: url("../../assets/images/backImgText.png");
-  background-repeat: no-repeat;
-  padding: 10px 0;
-}
-.text {
-  width: 468px;
-  height: 225px;
-  text-align: center;
-  font-family: "Jingleberry";
-  text-transform: uppercase;
-  border-radius: 15px;
-
-  & h1 {
-    display: flex;
-    justify-content: space-evenly;
-    font-size: 150px;
-    margin: 0;
-
-    & .kLayer,
-    & .oLayer,
-    & .nLayer,
-    & .gLayer {
-      position: relative;
-    }
-
-    & .kLetter,
-    & .oLetter,
-    & .nLetter,
-    & .gLetter {
-      position: relative;
-      z-index: 2;
-    }
-
-    & .kBottomLayer,
-    & .oBottomLayer,
-    & .nBottomLayer,
-    & .gBottomLayer {
-      position: absolute;
-      z-index: 1;
-      top: -3px;
-      left: 2px;
-      color: inherit;
-      text-shadow: none;
-    }
-
-    & .kLetter {
-      color: #ffb032;
-      text-shadow: -5px 3px 0px black;
-    }
-
-    & .oLetter {
-      color: #535353;
-      text-shadow: -5px 3px 0px black;
-    }
-
-    & .nLetter {
-      color: #ffb032;
-      text-shadow: -5px 3px 0px black;
-    }
-
-    & .gLetter {
-      color: #535353;
-      text-shadow: -5px 3px 0px black;
-    }
-  }
-
-  & p {
-    font-size: 43px;
-    display: flex;
-    justify-content: space-evenly;
-    margin: 0;
-  }
+  transition: opacity 1s ease-in-out;
 }
 
+.text__back__img img {
+  width: 100%;
+}
+.text__back__img__mobile {
+  display: none;
+}
+.text__back__img.visible {
+  opacity: 1;
+}
 .content__buttons {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: end;
   gap: 10px;
   width: 20%;
 }
 .twitter__btn:hover img {
   cursor: pointer;
-  content: url("../../assets/images/twitter2.png");
+  transition-duration: 0.5s;
+  transform: scale(1.1);
+  content: url("../../assets/images/tg_1.png");
 }
-
+.twitter__btn:active img {
+  cursor: pointer;
+  content: url("../../assets/images/tg_2.png");
+}
 .telegram__btn:hover img {
   cursor: pointer;
-  content: url("../../assets/images/telegram2.png");
+  transition-duration: 0.5s;
+  transform: scale(1.1);
+  content: url("../../assets/images/tw_1.png");
+}
+.telegram__btn:active img {
+  cursor: pointer;
+  content: url("../../assets/images/tw_2.png");
 }
 .running__text__block {
+  width: 100%;
   position: absolute;
   bottom: 0;
 }
 
-/* Media Queries */
-@media (max-width: 1024px) {
-  .container {
-    width: 90%;
-  }
-  .kong__head {
-    width: 15%;
-    text-align: center;
-  }
-  .content__buttons {
-    width: 20%;
-  }
-  .text__back__img {
-    background-image: url("../../assets/images/backImgText2.png");
-  }
-  .text {
-    width: 343px;
-    height: 168px;
-
-    & h1 {
-      justify-content: center;
-      font-size: 110px;
-    }
-
-    & p {
-      font-size: 28px;
-    }
-  }
-}
-
-@media (max-width: 768px) {
-  .content {
-    padding-top: 30px;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-  .kong__head {
-    width: 30%;
-    text-align: center;
-  }
-  .content__buttons {
-    width: 30%;
-  }
-  .text__back__img {
-    height: 166px;
-    order: 3;
-    & h1 {
-      justify-content: center;
-      font-size: 110px;
-    }
-
-    & p {
-      font-size: 28px;
-    }
-  }
-}
-
-@media (max-width: 425px) {
+@media (max-width: 810px) {
   .heroSection {
-    height: 800px;
+    & .content {
+      align-items: stretch;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      flex-direction: row;
+      row-gap: 25px;
+    }
+  }
+  .text__back__img {
+    display: none;
+  }
+  .text__back__img__mobile {
+    display: block;
+    width: 100%;
+    order: 3;
+  }
+  .text__back__img__mobile img {
+    width: 100%;
+  }
+  .text__back__img__mobile.visible {
+    opacity: 1;
+  }
+  .kong__head img {
+    content: url("../../assets/images/kongHeadmobile.png");
+  }
+
+  .twitter__btn img {
+    content: url("../../assets/images/twmob.png");
+  }
+  .telegram__btn img {
+    content: url("../../assets/images/telemob.png");
   }
 }
+

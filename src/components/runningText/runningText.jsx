@@ -20,7 +20,12 @@ export default function RunningText() {
           New token (contract) New token (contract) New token (contract) New
           token (contract) New token (contract) New token (contract) New token
           (contract) New token (contract) New token (contract) New token
-          (contract)
+          (contract) New token (contract) New token (contract) New token
+          (contract) New token (contract) New token (contract) New token
+          (contract) New token (contract) New token (contract) New token
+          (contract) New token (contract) New token (contract) New token
+          (contract) New token (contract) New token (contract) New token
+          (contract) New token (contract)
         </Marquee>
       </div>
     </div>
