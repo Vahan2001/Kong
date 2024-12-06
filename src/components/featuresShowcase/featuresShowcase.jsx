@@ -23,7 +23,6 @@ export default function FeaturesShowcase() {
     };
   }, []);
 
-  // Rename the variable to avoid conflicts with the imported dAnimation
   const currentAnimation = windowWidth <= 986 ? mobileAnimation : dAnimation;
 
   useEffect(() => {
