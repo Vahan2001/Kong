@@ -4,6 +4,7 @@ import kongHeadImg from "../../assets/images/footerheadtext.svg";
 import twitterImg from "../../assets/images/defaulttw.png";
 import telegramImg from "../../assets/images/defaulttele.png";
 import rocketBanana from "../../assets/videos/Fire_rocketBanana.webm";
+import rocketBananaMp4 from "../../assets/videos/Fire_rockethevc-safari.mp4";
 import text from "../../assets/images/footerText.svg";
 
 import style from "./footerSection.module.css";
@@ -11,6 +12,13 @@ import style from "./footerSection.module.css";
 export default function FooterSection() {
   const contentRef = useRef(null);
   const mediaBlockRef = useRef(null);
+
+  const isIOS = () => {
+    return (
+      /iPhone|iPad|iPod/i.test(navigator.userAgent) ||
+      (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1)
+    );
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -41,8 +49,12 @@ export default function FooterSection() {
           </div>
 
           <div className={style.footer__video}>
-            <video autoPlay loop muted type="video/webm">
-              <source src={rocketBanana} type="video/mp4" />
+            <video autoPlay loop muted>
+              {isIOS() ? (
+                <source src={rocketBananaMp4} type="video/mp4" />
+              ) : (
+                <source src={rocketBanana} type="video/webm" />
+              )}
             </video>
           </div>
         </div>
