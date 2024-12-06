@@ -17,6 +17,7 @@ export default function FooterSection() {
   useEffect(() => {
     const userAgent = navigator.userAgent || navigator.vendor || window.opera;
     setIsIOS(/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream);
+    console.log(isIOS, "_________________________");
 
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -47,11 +48,16 @@ export default function FooterSection() {
 
           <div className={style.footer__video}>
             <video autoPlay loop muted playsInline>
-              <source
+              {/* <source
                 src={isIOS ? rocketBananaMp4 : rocketBanana}
                 type={isIOS ? "video/mp4" : "video/webm"}
-              />
+              /> */}
+              <source src={rocketBanana} type={"video/webm"} />
             </video>
+            <video autoPlay loop muted playsInline>
+              <source src={rocketBananaMp4} type={"video/mp4"} />
+            </video>
+            <p>{isIOS}</p>
           </div>
         </div>
       </div>
