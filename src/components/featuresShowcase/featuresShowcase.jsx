@@ -17,13 +17,12 @@ export default function FeaturesShowcase() {
   };
 
   useEffect(() => {
-    window.addEventListener('resize', updateWindowWidth);
+    window.addEventListener("resize", updateWindowWidth);
     return () => {
-      window.removeEventListener('resize', updateWindowWidth);
+      window.removeEventListener("resize", updateWindowWidth);
     };
   }, []);
 
-  // Rename the variable to avoid conflicts with the imported dAnimation
   const currentAnimation = windowWidth <= 986 ? mobileAnimation : dAnimation;
 
   useEffect(() => {
@@ -96,7 +95,11 @@ export default function FeaturesShowcase() {
       <div className="container">
         <div className={style.kong_dys} ref={kongDysRef}>
           <div className={style.animation}>
-            <img src={currentAnimation} alt="Kong Banner" className={style.animImg} />
+            <img
+              src={currentAnimation}
+              alt="Kong Banner"
+              className={style.animImg}
+            />
           </div>
         </div>
       </div>
