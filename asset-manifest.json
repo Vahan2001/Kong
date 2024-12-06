@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Kong/static/css/main.68f50a29.css",
-    "main.js": "/Kong/static/js/main.1c0c4d29.js",
+    "main.css": "/Kong/static/css/main.42298e72.css",
+    "main.js": "/Kong/static/js/main.a9d3ae1a.js",
     "static/js/453.666af1d9.chunk.js": "/Kong/static/js/453.666af1d9.chunk.js",
     "static/media/Fire_rockethevc-safari.mp4": "/Kong/static/media/Fire_rockethevc-safari.5334caaff0a8fd89b2c8.mp4",
     "static/media/Kong_Rin2.mp4": "/Kong/static/media/Kong_Rin2.fba6f885ae59e661929c.mp4",
@@ -42,12 +42,12 @@
     "static/media/second.png": "/Kong/static/media/second.da82a3e4feb5c8a78db6.png",
     "static/media/first.png": "/Kong/static/media/first.175fcd57e2ba83abdc99.png",
     "index.html": "/Kong/index.html",
-    "main.68f50a29.css.map": "/Kong/static/css/main.68f50a29.css.map",
-    "main.1c0c4d29.js.map": "/Kong/static/js/main.1c0c4d29.js.map",
+    "main.42298e72.css.map": "/Kong/static/css/main.42298e72.css.map",
+    "main.a9d3ae1a.js.map": "/Kong/static/js/main.a9d3ae1a.js.map",
     "453.666af1d9.chunk.js.map": "/Kong/static/js/453.666af1d9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.68f50a29.css",
-    "static/js/main.1c0c4d29.js"
+    "static/css/main.42298e72.css",
+    "static/js/main.a9d3ae1a.js"
   ]
 }
