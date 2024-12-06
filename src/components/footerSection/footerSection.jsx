@@ -11,31 +11,31 @@ import style from "./footerSection.module.css";
 
 export default function FooterSection() {
   const contentRef = useRef(null);
-  const mediaBlockRef = useRef(null);
+  const videoRef = useRef(null);
 
   const isIOS = () => {
-    return (
-      /iPhone|iPad|iPod/i.test(navigator.userAgent) ||
-      (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1)
-    );
+    if (navigator.userAgentData) {
+      return navigator.userAgentData.platform === "iOS";
+    }
+    return /iPhone|iPad|iPod/i.test(navigator.userAgent);
   };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          contentRef.current.classList.add(style.visible);
+          videoRef.current.play();
         } else {
-          contentRef.current.classList.remove(style.visible);
+          videoRef.current.pause();
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.5 }
     );
 
-    if (contentRef.current) observer.observe(contentRef.current);
+    if (videoRef.current) observer.observe(videoRef.current);
 
     return () => observer.disconnect();
-  }, [contentRef, mediaBlockRef]);
+  }, []);
 
   return (
     <div>
@@ -49,7 +49,7 @@ export default function FooterSection() {
           </div>
 
           <div className={style.footer__video}>
-            <video autoPlay loop muted>
+            <video ref={videoRef} loop muted controls={false}>
               {isIOS() ? (
                 <source src={rocketBananaMp4} type="video/mp4" />
               ) : (
