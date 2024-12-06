@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import RunningText from "../runningText/runningText";
-import kongHeadImg from "../../assets/images/kongHead.png";
+import kongHeadImg from "../../assets/images/footerheadtext.svg";
 import twitterImg from "../../assets/images/defaulttw.png";
 import telegramImg from "../../assets/images/defaulttele.png";
 import rocketBanana from "../../assets/videos/Fire rocket-vp9-chrome.webm";
@@ -47,29 +47,11 @@ export default function FooterSection() {
           </div>
         </div>
       </div>
-      {/* <footer>
+      <footer>
         <div className="container">
           <div className={style.footer__flex}>
             <div className={style.head__and__text}>
               <img src={kongHeadImg} alt="Kong Head" />
-              <p>
-                <span className={style.kLayer}>
-                  <span className={style.kLetter}>K</span>
-                  <span className={style.kBottomLayer}>K</span>
-                </span>
-                <span className={style.oLayer}>
-                  <span className={style.oLetter}>O</span>
-                  <span className={style.oBottomLayer}>O</span>
-                </span>
-                <span className={style.nLayer}>
-                  <span className={style.nLetter}>N</span>
-                  <span className={style.nBottomLayer}>N</span>
-                </span>
-                <span className={style.gLayer}>
-                  <span className={style.gLetter}>G</span>
-                  <span className={style.gBottomLayer}>G</span>
-                </span>
-              </p>
             </div>
             <div className={style.icon}>
               <div className={style.tele__and__tw}>
@@ -86,7 +68,7 @@ export default function FooterSection() {
             <span>© KONG 2024 - All rights reserved</span>
           </div>
         </div>
-      </footer> */}
+      </footer>
     </div>
   );
 }
