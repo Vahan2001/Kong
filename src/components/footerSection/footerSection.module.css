@@ -15,20 +15,17 @@
   }
 }
 
-.visible {
-  opacity: 1;
-  transform: translateX(0);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
 .hidden {
   opacity: 0;
   transform: translateX(-100%);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
-
-.media__block {
-  display: none;
+.visible {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
+
 .footer__video {
   display: flex;
   justify-content: end;

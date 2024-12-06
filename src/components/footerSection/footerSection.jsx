@@ -15,14 +15,19 @@ export default function FooterSection() {
   const [isLoad, setIsLoad] = useState(false);
 
   useEffect(() => {
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    const isIosDevice = /iPad|iPhone|iPod/.test(userAgent);
+    setIsIOS(isIosDevice);
+    setIsLoad(true);
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          contentRef.current.classList.add(style.visible);
-          contentRef.current.classList.remove(style.hidden);
+          entry.target.classList.add(style.visible);
+          entry.target.classList.remove(style.hidden);
         } else {
-          contentRef.current.classList.remove(style.visible);
-          contentRef.current.classList.add(style.hidden);
+          entry.target.classList.remove(style.visible);
+          entry.target.classList.add(style.hidden);
         }
       },
       { threshold: 0.1 }
@@ -31,14 +36,7 @@ export default function FooterSection() {
     if (contentRef.current) observer.observe(contentRef.current);
 
     return () => observer.disconnect();
-  }, [contentRef]);
-
-  useEffect(() => {
-    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-    const isIosDevice = /iPad|iPhone|iPod/.test(userAgent);
-    setIsIOS(isIosDevice);
-    setIsLoad(true);
-  }, []);
+  }, [isLoad]);
 
   if (!isLoad) return null;
 
@@ -47,7 +45,7 @@ export default function FooterSection() {
       <div className={style.running__text__block}>
         <RunningText />
       </div>
-      <div className={`${style.footer__section}`}>
+      <div className={style.footer__section}>
         <div className="container">
           <div ref={contentRef} className={`${style.content} ${style.hidden}`}>
             <img src={text} alt="Footer Text" />
