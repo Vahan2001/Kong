@@ -41,7 +41,7 @@ export default function FooterSection() {
           </div>
 
           <div className={style.footer__video}>
-            <video controls autoPlay loop muted type="video/webm">
+            <video autoPlay loop muted type="video/webm">
               <source src={rocketBanana} type="video/mp4" />
             </video>
           </div>
