@@ -16,11 +16,6 @@ export default function FooterSection() {
   const [isLoad, setIsLoad] = useState(false);
 
   useEffect(() => {
-    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-    const b = /iPad|iPhone|iPod/.test(userAgent);
-    setIsIOS(b);
-    setIsLoad(true);
-
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -35,7 +30,14 @@ export default function FooterSection() {
     if (contentRef.current) observer.observe(contentRef.current);
 
     return () => observer.disconnect();
-  }, [contentRef, mediaBlockRef, isIOS]);
+  }, []);
+
+  useEffect(() => {
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    const b = /iPad|iPhone|iPod/.test(userAgent);
+    setIsIOS(b);
+    setIsLoad(true);
+  }, [contentRef, mediaBlockRef, isIOS, isLoad]);
 
   if (!isLoad) return null;
 
