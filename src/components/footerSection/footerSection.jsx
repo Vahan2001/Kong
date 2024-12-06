@@ -13,12 +13,13 @@ export default function FooterSection() {
   const contentRef = useRef(null);
   const mediaBlockRef = useRef(null);
   const [isIOS, setIsIOS] = useState(false);
+  const [isLoad, setIsLoad] = useState(false);
 
   useEffect(() => {
     const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-    setIsIOS(/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream);
-    console.log(isIOS, "_________________________");
-
+    const b = /iPad|iPhone|iPod/.test(userAgent);
+    setIsIOS(b);
+    setIsLoad(true);
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -34,7 +35,7 @@ export default function FooterSection() {
 
     return () => observer.disconnect();
   }, [contentRef, mediaBlockRef]);
-
+  if (!isLoad) return null;
   return (
     <div>
       <div className={style.running__text__block}>
@@ -49,7 +50,7 @@ export default function FooterSection() {
           <div className={style.footer__video}>
             {isIOS ? (
               <video autoPlay loop muted playsInline>
-                <source src={rocketBanana} type={"video/webm"} />
+                <source src={rocketBananaMp4} type={"video/mp4"} />
               </video>
             ) : (
               <video autoPlay loop muted playsInline>
