@@ -11,7 +11,6 @@ import style from "./footerSection.module.css";
 
 export default function FooterSection() {
   const contentRef = useRef(null);
-  const mediaBlockRef = useRef(null);
   const [isIOS, setIsIOS] = useState(false);
   const [isLoad, setIsLoad] = useState(false);
 
@@ -20,8 +19,10 @@ export default function FooterSection() {
       ([entry]) => {
         if (entry.isIntersecting) {
           contentRef.current.classList.add(style.visible);
+          contentRef.current.classList.remove(style.hidden);
         } else {
           contentRef.current.classList.remove(style.visible);
+          contentRef.current.classList.add(style.hidden);
         }
       },
       { threshold: 0.1 }
@@ -30,12 +31,12 @@ export default function FooterSection() {
     if (contentRef.current) observer.observe(contentRef.current);
 
     return () => observer.disconnect();
-  }, [contentRef, mediaBlockRef]);
+  }, [contentRef]);
 
   useEffect(() => {
     const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-    const b = /iPad|iPhone|iPod/.test(userAgent);
-    setIsIOS(b);
+    const isIosDevice = /iPad|iPhone|iPod/.test(userAgent);
+    setIsIOS(isIosDevice);
     setIsLoad(true);
   }, []);
 
