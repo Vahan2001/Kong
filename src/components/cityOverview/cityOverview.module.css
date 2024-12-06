@@ -15,8 +15,8 @@
   justify-content: center;
 }
 .content {
-  background-image: url("../../assets/images/backGround.jpg");
-  width: 775px;
+  background-image: url("../../assets/images/sec_pict.svg");
+  width: 980px;
   height: 207px;
   background-size: cover;
   background-position: center;
@@ -29,7 +29,6 @@
   justify-content: center;
   text-align: center;
   line-height: 70px;
-  border: 3px solid white;
 }
 .content {
   opacity: 0;
@@ -58,58 +57,25 @@
   height: 1200px;
   margin-bottom: -150px;
 }
-@media (max-width: 910px) {
-  .content {
-    width: 560px;
-  }
-}
-
-@media (max-width: 780px) {
-  .heroSection {
-    height: 812px;
-  }
-  .animated_div {
-    width: 600px;
-    height: 600px;
-    margin-bottom: -150px;
-  }
+@media (max-width: 1439px) {
   .content {
     width: 343px;
-    height: 176px;
-    margin-bottom: 10px;
-    background-size: cover;
-    line-height: 40px;
+    height: 158px;
+    background-image: url("../../assets/images/sec_mob.svg");
+    background-position: center;
+    background-size: contain;
   }
-  .textLayer {
-    font-size: 30px;
-    font-family: "Jingleberry";
-    position: relative;
-    padding: 5px;
+  .animated_div {
+    width: 100%;
+  }
+  .heroSection {
+    background-position: 60%;
   }
 }
 
 @media (max-width: 480px) {
-  .heroSection {
-    height: 812px;
-  }
-
-  .animated_div {
-    width: 350px;
-    height: 550px;
-    margin-bottom: -150px;
-  }
-  .content {
-    width: 190px;
-    margin-bottom: 0px;
-    margin: 20px;
-    background-size: cover;
-    line-height: 30px;
-  }
-
-  .textLayer {
-    font-size: 19px;
-    font-family: "Jingleberry";
-    position: relative;
-    padding: 5px;
+  .content{
+    width: 301px;
+    height: 135px;
   }
 }

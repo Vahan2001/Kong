@@ -18,34 +18,3 @@ code {
   width: 100%;
   margin: 0 auto;
 }
-
-@media (max-width: 1480px) {
-  .container {
-    width: 1200px;
-  }
-}
-
-@media (max-width: 1290px) {
-  .container {
-    width: 900px;
-  }
-}
-
-@media (max-width: 1010px) {
-  .container {
-    width: 700px;
-  }
-}
-
-@media (max-width: 840px) {
-  .container {
-    width: 80%;
-    padding: 0 15px;
-  }
-}
-
-@media (max-width: 480px) {
-  .container {
-    padding: 0 10px;
-  }
-}
