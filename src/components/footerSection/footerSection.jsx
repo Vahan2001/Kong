@@ -49,7 +49,7 @@ export default function FooterSection() {
           <div className={style.footer__video}>
             {isIOS ? (
               <video autoPlay loop muted playsInline>
-                <source src={rocketBananaMp4} type={"video/mp4"} />
+                <source src={rocketBanana} type={"video/webm"} />
               </video>
             ) : (
               <video autoPlay loop muted playsInline>
