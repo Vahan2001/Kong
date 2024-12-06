@@ -13,29 +13,26 @@
   & img {
     display: block;
     width: 100%;
+    height: 100%;
   }
 }
-.animation {
-  width: 525px;
-  height: 206px;
-}
-.animImg {
-  width: 100%;
-  height: 179px;
-  object-fit: fill;
-  padding: 0px 0px;
-  position: relative;
-  right: -44px;
-  top: 33px;
-}
+
 .kong_dys {
+  width: 32%;
+  height: 30%;
   position: absolute;
-  bottom: 5rem;
-  right: 7rem;
+  bottom: 4rem;
+  right: 5rem;
   z-index: 1000;
   opacity: 0;
   transform: translateY(100px);
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+
+  & img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .kong_dys.visible {
@@ -45,77 +42,6 @@
 .running__text {
   position: absolute;
   bottom: 0;
-}
-@media (max-width:2560px) {
-  .kong_dys {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    bottom: 3rem;
-    right: 6%;
-    align-content: flex-end;
-  } 
-  .animation{
-    width: 945px;
-    height: 413px;
-  }
-  .animImg{
-    right: -40px;
-    top: 66px;
-    width: 100%;
-    height: 340px;
-    object-fit: fill;
-    padding: 0px 0px;
-    position: relative;
-    right: -44px;
-    top: 33px;
-  }
-  
-}
- @media (max-width: 1440px) {
-   .kong_dys {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    bottom: 3rem;
-    right: 6%;
-    align-content: flex-end;
-  } 
-  .animation{
-    width: 600px;
-    height: 240px;
-  }
-  .animImg{
-    right: -5rem;
-    top: 54px;
-  }
-} 
-
-@media (max-width: 1200px) {
-  .animImg{
-    right: -23rem;
-    top: 75px;
-  }
-  .kong_dys {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .animation{
-    width: 394px;
-    height: 174x;
-}
-}
-
-@media (max-width:1060px){
-  .animation{
-    width: 350px;
-    height: 150px;
-  }
-  .animImg{
-    right: -19.3rem;
-    top: -13px;;
-  }
 }
 
 @media (max-width: 998px) {
@@ -131,84 +57,9 @@
   .kong-section-item {
     width: 100%;
   }
-  .animImg {
-    object-fit: fill;
-    padding: 0px 0px;
-    position: relative;
-    right: -16px;
-    top: -46px;
-  }
-  .animation{
-    /* width: 360px; */
-    /* height: 160px; */
-  }
-  .kong_dys {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin: auto;
-    right: 0%;
-  }
 }
 @media (max-width: 780px) {
   .kong_section {
     flex-wrap: wrap;
-  }
-  .kong_dys {
-    right: 0%;
-  }
-  .animation{
-    /* width: 400px; */
-    /* height: 190px; */
-  }
-  .animImg{
-    /* top: -30px; */
-    right: 0px;
-  }
-
-}
-
-@media (max-width: 600px) {
-  .kong_dys {
-    width: 100%;
-    right: 0%;
-  }
-
-  .animation{
-    height: 170px;
-    width: 390px;
-  }
-  .animImg{
-    top: -24px;
-  }
-}
-
-@media (max-width: 480px) {
-  .kong_dys {
-    width: 100%;
-    padding: 0px -2rem;
-  }
-  .animation{
-    height: 140px;
-    width: 328px;
-  }
-  .animImg{
-    top: -31px;
-    right: 3px;
-  }
-}
-
-@media (max-width: 378px) {
-  .kong_dys {
-    text-align: center;
-  }
-  .animation{
-    height: 140px;
-    width: 260px;
-  }
-  .animImg{
-    top: -35px;
-    right: 0px;
   }
 }
