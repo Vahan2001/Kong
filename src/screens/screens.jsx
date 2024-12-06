@@ -6,11 +6,11 @@ import FooterSection from "../components/footerSection/footerSection";
 export default function Screens() {
   return (
     <div>
-      {/* <HeroSection /> */}
-      {/* <CityOverview /> */}
+      <HeroSection />
+      <CityOverview />
       <FeaturesShowcase />
-      {/* <StatisticsPanel /> */}
-      {/* <FooterSection /> */}
+      <StatisticsPanel />
+      <FooterSection />
     </div>
   );
 }
