@@ -6,11 +6,11 @@ import StatisticsPanel from "../components/statisticsPanel/statisticsPanel";
 export default function Screens() {
   return (
     <div>
-      {/* <HeroSection /> */}
-      {/* <CityOverview /> */}
+      <HeroSection />
+      <CityOverview />
       <FeaturesShowcase />
-      {/* <StatisticsPanel /> */}
-      {/* <FooterSection /> */}
+      <StatisticsPanel />
+      <FooterSection />
     </div>
   );
 }
