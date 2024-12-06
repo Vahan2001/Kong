@@ -93,8 +93,10 @@ export default function FeaturesShowcase() {
         </div>
       </div>
       <div className="container">
-        <div className={style.kong_dys} ref={kongDysRef}>
-          <img src={currentAnimation} alt="Kong Banner" />
+        <div className={style.position__text}>
+          <div className={style.kong_dys} ref={kongDysRef}>
+            <img src={currentAnimation} alt="Kong Banner" />
+          </div>
         </div>
       </div>
       <div className={style.running__text}>

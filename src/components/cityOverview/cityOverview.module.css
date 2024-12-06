@@ -1,7 +1,7 @@
 .heroSection {
   background-image: url("../../assets/images/Kong_Central.jpg");
   background-size: cover;
-  background-position: top;
+  background-position: bottom;
   background-repeat: no-repeat;
   height: 1440px;
   display: flex;
@@ -74,7 +74,7 @@
 }
 
 @media (max-width: 480px) {
-  .content{
+  .content {
     width: 301px;
     height: 135px;
   }
