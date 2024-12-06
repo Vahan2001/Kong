@@ -1,38 +1,41 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import RunningText from "../runningText/runningText";
 import kongHeadImg from "../../assets/images/kongHead.png";
 import twitterImg from "../../assets/images/twitter.png";
 import telegramImg from "../../assets/images/telegram.png";
+import kongText from "../../assets/images/headertext1.svg";
+import kongText2 from "../../assets/images/headertext2.svg";
+import kongTextMobile1 from "../../assets/images/headertextmob1.svg";
+import kongTextMobile2 from "../../assets/images/headertextmob2.svg";
 import animationKong from "../../assets/videos/Kong_Rin2.mp4";
 import style from "./heroSection.module.css";
 
 export default function HeroSection() {
   const videoRef = useRef(null);
+  const [showKongText, setShowKongText] = useState(true);
+  const [showKongText2, setShowKongText2] = useState(false);
+  const [showKongTextMobile, setShowKongTextMobile] = useState(true);
+  const [showKongText2Mobile, setShowKongText2Mobile] = useState(false);
 
   useEffect(() => {
     const videoElement = videoRef.current;
-    if (videoElement) {
-      videoElement.addEventListener("ended", () => {
-        document
-          .querySelector(`.${style.text__back__img}`)
-          .classList.add(style.visible);
 
-        document
-          .querySelector(`.${style.text__mobile}`)
-          .classList.add(style.visible);
+    if (videoElement) {
+      videoElement.addEventListener("play", () => {
+        setTimeout(() => setShowKongText(false), 2500);
+        setTimeout(() => setShowKongTextMobile(false), 2500);
+      });
+
+      videoElement.addEventListener("ended", () => {
+        setShowKongText2(true);
+        setShowKongText2Mobile(true);
       });
     }
 
     return () => {
       if (videoElement) {
-        videoElement.removeEventListener("ended", () => {
-          document
-            .querySelector(`.${style.text__back__img}`)
-            .classList.add(style.visible);
-          document
-            .querySelector(`.${style.text__mobile}`)
-            .classList.add(style.visible);
-        });
+        videoElement.removeEventListener("play", () => {});
+        videoElement.removeEventListener("ended", () => {});
       }
     };
   }, []);
@@ -50,30 +53,27 @@ export default function HeroSection() {
           <div className={style.kong__head}>
             <img src={kongHeadImg} alt="Kong Head" />
           </div>
-          <div className={style.text__back__img}>
-            <div className={style.text}>
-              <h1>
-                <span className={style.kLayer}>
-                  <span className={style.kLetter}>K</span>
-                  <span className={style.kBottomLayer}>K</span>
-                </span>
-                <span className={style.oLayer}>
-                  <span className={style.oLetter}>O</span>
-                  <span className={style.oBottomLayer}>O</span>
-                </span>
-                <span className={style.nLayer}>
-                  <span className={style.nLetter}>N</span>
-                  <span className={style.nBottomLayer}>N</span>
-                </span>
-                <span className={style.gLayer}>
-                  <span className={style.gLetter}>G</span>
-                  <span className={style.gBottomLayer}>G</span>
-                </span>
-              </h1>
-              <p>MISSION TO BANANA ZONE</p>
+          {showKongText && (
+            <div className={style.text__back__img}>
+              <img src={kongText} alt="Kong Initial Text" />
             </div>
-          </div>
-          <div className={style.text__mobile}></div>
+          )}
+          {showKongText2 && (
+            <div className={style.text__back__img}>
+              <img src={kongText2} alt="Kong Final Text" />
+            </div>
+          )}
+
+          {showKongTextMobile && (
+            <div className={style.text__back__img__mobile}>
+              <img src={kongTextMobile1} alt="Kong Initial Text" />
+            </div>
+          )}
+          {showKongText2Mobile && (
+            <div className={style.text__back__img__mobile}>
+              <img src={kongTextMobile2} alt="Kong Final Text" />
+            </div>
+          )}
           <div className={style.content__buttons}>
             <div className={style.twitter__btn}>
               <img src={twitterImg} alt="Twitter" />
