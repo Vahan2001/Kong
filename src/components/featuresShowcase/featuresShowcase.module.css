@@ -15,42 +15,24 @@
     width: 100%;
   }
 }
-
+.animation{
+  width: 525px;
+  height: 206px;
+}
+.animImg{
+  width: 100%;
+  height: 179px;
+  object-fit: fill;
+  padding: 0px 0px;
+  position: relative;
+  right: -16px;
+  top: 3px;
+}
 .kong_dys {
   position: absolute;
-  bottom: 100px;
-  right: 65px;
-}
-
-.kong_banner {
-  background-image: url("../../assets/images/Frame1.png");
-  width: 525px;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  line-height: 45px;
-}
-.kong_text {
-  font-size: 35px;
-  color: #000;
-  font-family: "Jingleberry";
-  position: relative;
-  padding: 15px;
-}
-
-.text_layer {
-  font-size: 35px;
-  position: relative;
-  font-family: "Jingleberry";
-  color: #ffb032;
-  text-shadow: 2px 2px 0px black, -2px 2px 0px black, 2px -2px 0px black,
-    -2px -2px 0px black;
-}
-.kong_dys {
+  bottom: 5rem;
+  right: 7rem;
+  z-index: 1000;
   opacity: 0;
   transform: translateY(100px);
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
@@ -64,43 +46,19 @@
   position: absolute;
   bottom: 0;
 }
-@media (max-width: 1420px) {
-  .kong_text {
-    font-size: 30px;
-  }
-  .text_layer {
-    font-size: 30px;
-  }
-  .kong_banner {
-    width: 525px;
-    line-height: 38px;
-  }
-}
-@media (max-width: 1220px) {
-  .kong_text {
-    font-size: 26px;
-  }
-  .text_layer {
-    font-size: 26px;
-  }
-  .kong_banner {
-    width: 525px;
-    line-height: 28px;
-  }
-}
-@media (max-width: 1100px) {
-  .kong_banner {
-    width: 525px;
-    line-height: 24px;
-  }
-  .kong_text {
-    font-size: 22px;
-  }
-  .text_layer {
-    font-size: 22px;
-  }
-}
-@media (max-width: 994px) {
+
+ @media (max-width: 1440px) {
+   .kong_dys {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    bottom: 3rem;
+    right: 6%;
+    align-content: flex-end;
+  } 
+} 
+
+@media (max-width: 986px) {
   .kong-section-item {
     & img {
       width: 100%;
@@ -113,20 +71,18 @@
   .kong-section-item {
     width: 100%;
   }
-  .kong_banner {
-    line-height: 30px;
-  }
-  .kong_text {
-    font-size: 30px;
-  }
-  .text_layer {
-    font-size: 30px;
+  .animImg{
+    object-fit: fill;
+    padding: 0px 0px;
+    position: relative;
+    right: -16px;
+    top: -46px;
   }
   .kong_dys {
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
     margin: auto;
     right: 0%;
   }
@@ -135,54 +91,29 @@
   .kong_section {
     flex-wrap: wrap;
   }
-  .kong_banner {
-    width: 400px;
-  }
-  .text_layer {
-    font-size: 26px;
-  }
-  .kong_text {
-    font-size: 26px;
+  .kong_dys{
+    right: 0%;
   }
 }
 
 @media (max-width: 600px) {
-  .kong_banner {
-    width: 343px;
-    text-align: center;
-  }
   .kong_dys {
-    margin: 0 auto;
-  }
-  .text_layer {
-    font-size: 24px;
-  }
-  .kong_text {
-    font-size: 24px;
+    width: 100%;
+    right: 0%;
   }
 }
 
 @media (max-width: 480px) {
-  .kong_banner {
-    width: 300px;
-  }
-
-  .text_layer {
-    font-size: 22px;
-  }
-  .kong_text {
-    font-size: 22px;
+  .kong_dys {
+    width: 100%;
+    padding: 0px -2rem;
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 378px) {
   .kong_dys {
     text-align: center;
   }
-  .text_layer {
-    font-size: 18px;
-  }
-  .kong_text {
-    font-size: 18px;
-  }
 }
+
+
