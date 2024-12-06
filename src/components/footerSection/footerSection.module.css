@@ -33,12 +33,10 @@
   justify-content: end;
   width: 100%;
   margin-top: -100px;
-  background-color: transparent;
 
   & video {
     width: 800px;
     height: 800px;
-    background-color: transparent;
   }
 }
 

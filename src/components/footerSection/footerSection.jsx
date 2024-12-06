@@ -20,6 +20,7 @@ export default function FooterSection() {
     const b = /iPad|iPhone|iPod/.test(userAgent);
     setIsIOS(b);
     setIsLoad(true);
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -34,8 +35,10 @@ export default function FooterSection() {
     if (contentRef.current) observer.observe(contentRef.current);
 
     return () => observer.disconnect();
-  }, [contentRef, mediaBlockRef]);
+  }, [contentRef, mediaBlockRef, isIOS]);
+
   if (!isLoad) return null;
+
   return (
     <div>
       <div className={style.running__text__block}>
